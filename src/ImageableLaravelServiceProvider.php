@@ -13,6 +13,8 @@ class ImageableLaravelServiceProvider extends ServiceProvider
                 \Gause\ImageableLaravel\Console\Commands\ImportImages::class,
             ]);
         }
+
+        \Illuminate\Support\Facades\Route::post('/api/images', '\Gause\ImageableLaravel\Http\Controllers\ImagesController@store');
     }
 
     public function register()
