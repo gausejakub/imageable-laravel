@@ -8,7 +8,11 @@ class ImageableLaravelServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                \Gause\ImageableLaravel\Console\Commands\ImportImages::class,
+            ]);
+        }
     }
 
     public function register()
