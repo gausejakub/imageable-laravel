@@ -4,7 +4,7 @@ namespace Gause\ImageableLaravel\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Image extends Facade
+class ImageFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
