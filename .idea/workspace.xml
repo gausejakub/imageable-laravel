@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1449e9a2-b80a-456f-bb56-a030fa54ab45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/imageable-laravel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/imageable-laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/imageable-laravel.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/create_images_table.php.stub" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Models/Image.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ImageableLaravelServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ImageableLaravelServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Endpoints/API/StoreImageEndpointTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Endpoints/API/StoreImageEndpointTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +118,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/database/migrations" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -152,7 +151,7 @@
       <workItem from="1585138566264" duration="158000" />
       <workItem from="1585138968629" duration="134000" />
       <workItem from="1585139118762" duration="29000" />
-      <workItem from="1585166686704" duration="1630000" />
+      <workItem from="1585166686704" duration="2801000" />
     </task>
     <servers />
   </component>
@@ -172,6 +171,14 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585166744278" />
+    <state x="421" y="40" key="CommitChangelistDialog2" timestamp="1585168874470">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="421" y="40" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1585168874470" />
+    <state x="615" y="332" key="NewPhpClassDialog" timestamp="1585168989774">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="615" y="332" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585168989774" />
     <state x="658" y="451" key="NewPhpFileDialog" timestamp="1585167086223">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -200,9 +207,9 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="533" y="314" width="700" height="530" key="recent.locations.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585166714076" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1585167406203">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1585169345604">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585167406203" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585169345604" />
   </component>
 </project>
