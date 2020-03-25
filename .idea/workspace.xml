@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1449e9a2-b80a-456f-bb56-a030fa54ab45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/create_images_table.php.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/Image.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/Models/ImageTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ImageableLaravelServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ImageableLaravelServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Image.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Requests/ImageableRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Requests/ImageableRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/LaravelTestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/LaravelTestCase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ImageTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/Requests/ImageableRequestTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Requests/ImageableRequestTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,11 +118,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/Unit/Models" />
       <recent name="$PROJECT_DIR$/database/migrations" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -151,7 +158,7 @@
       <workItem from="1585138566264" duration="158000" />
       <workItem from="1585138968629" duration="134000" />
       <workItem from="1585139118762" duration="29000" />
-      <workItem from="1585166686704" duration="2801000" />
+      <workItem from="1585166686704" duration="5592000" />
     </task>
     <servers />
   </component>
@@ -183,10 +190,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="658" y="451" key="NewPhpFileDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585167086223" />
-    <state x="289" y="152" key="SettingsEditor" timestamp="1585167054765">
+    <state x="289" y="152" key="SettingsEditor" timestamp="1585172633937">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="289" y="152" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1585167054765" />
+    <state x="289" y="152" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1585172633937" />
     <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1585119906119">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -199,17 +206,21 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="622" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1050@0.0.1680.1050" timestamp="1585167964946" />
+    <state x="512" y="169" width="936" height="712" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1585169822253">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="512" y="169" width="936" height="712" key="com.jetbrains.php.test.PhpNewTestDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585169822253" />
     <state x="411" y="88" width="858" height="873" key="find.popup" timestamp="1585167496742">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="411" y="88" width="858" height="873" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585167496742" />
-    <state x="533" y="314" width="700" height="530" key="recent.locations.popup" timestamp="1585166714076">
+    <state x="533" y="314" width="700" height="530" key="recent.locations.popup" timestamp="1585171685225">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="533" y="314" width="700" height="530" key="recent.locations.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585166714076" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1585169345604">
+    <state x="533" y="314" width="700" height="530" key="recent.locations.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585171685225" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1585170949007">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585169345604" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585170949007" />
   </component>
 </project>

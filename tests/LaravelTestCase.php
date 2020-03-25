@@ -19,4 +19,11 @@ class LaravelTestCase extends TestCase
             'Image' => \Gause\ImageableLaravel\Facades\Image::class,
         ];
     }
+
+    public function getEnvironmentSetUp($app)
+    {
+        include_once __DIR__ . '/../database/migrations/create_images_table.php.stub';
+
+        (new \CreateImagesTable())->up();
+    }
 }
