@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1449e9a2-b80a-456f-bb56-a030fa54ab45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,6 +94,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1585119906119">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1585119906119" />
     <state x="489" y="259" width="700" height="530" key="recent.locations.popup" timestamp="1585082708560">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
