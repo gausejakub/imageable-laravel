@@ -9,7 +9,7 @@ class LaravelTestCase extends TestCase
     public function getPackageProviders($app)
     {
         return [
-            \Gause\ImageableLaravel\ImageableLaravelServiceProvider::class
+            \Gause\ImageableLaravel\ImageableLaravelServiceProvider::class,
         ];
     }
 

@@ -10,7 +10,7 @@ class StoreImageEndpointTest extends LaravelTestCase
     public function can_call_store_image_endpoint()
     {
         $response = $this->post('/api/images', []);
-        
+
         $response->assertStatus(200);
     }
 }
