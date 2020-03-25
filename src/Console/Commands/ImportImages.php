@@ -12,7 +12,7 @@ class ImportImages extends Command
 
     public function handle()
     {
-       // TODO 
-       return true;
+        // TODO
+        return true;
     }
 }
