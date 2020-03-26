@@ -9,7 +9,7 @@ use Illuminate\Foundation\Http\FormRequest;
 class ImageableRequest extends FormRequest
 {
     /**
-     * Creates and saves Images from Request
+     * Creates and saves Images from Request.
      *
      * @param string $prefix
      * @param \Illuminate\Database\Eloquent\Model|null $model
@@ -21,16 +21,16 @@ class ImageableRequest extends FormRequest
 
         $images = [];
 
-        foreach ($this->{$prefix . 's'} as $image) {
+        foreach ($this->{$prefix.'s'} as $image) {
             // TODO: save Image to prefered storage
             $fileName = 'NewImageName';
             $fileExtension = 'jpg';
             $fileSize = 69;
 
             $image = Image::create([
-                'name' => $this->{$prefix . '_name'},
-                'short_description' => $this->{$prefix . '_short_description'},
-                'description' => $this->{$prefix . '_description'},
+                'name' => $this->{$prefix.'_name'},
+                'short_description' => $this->{$prefix.'_short_description'},
+                'description' => $this->{$prefix.'_description'},
                 'file_name' => $fileName,
                 'file_extension' => $fileExtension,
                 'file_size' => $fileSize,
@@ -61,9 +61,9 @@ class ImageableRequest extends FormRequest
         $fileSize = 69;
 
         $image = Image::create([
-            'name' => $this->{$prefix . '_name'},
-            'short_description' => $this->{$prefix . '_short_description'},
-            'description' => $this->{$prefix . '_description'},
+            'name' => $this->{$prefix.'_name'},
+            'short_description' => $this->{$prefix.'_short_description'},
+            'description' => $this->{$prefix.'_description'},
             'file_name' => $fileName,
             'file_extension' => $fileExtension,
             'file_size' => $fileSize,
@@ -83,15 +83,15 @@ class ImageableRequest extends FormRequest
     private function validateImage($prefix = 'image'): void
     {
         $this->validate([
-            $prefix . '_name' => 'nullable|string|max:255',
-            $prefix . '_short_description' => 'nullable|string|max:5000',
-            $prefix . '_description' => 'nullable|string|max:5000',
+            $prefix.'_name' => 'nullable|string|max:255',
+            $prefix.'_short_description' => 'nullable|string|max:5000',
+            $prefix.'_description' => 'nullable|string|max:5000',
             $prefix => 'required|image',
         ]);
     }
 
     /**
-     * Validate if Request is suitable for creating Images
+     * Validate if Request is suitable for creating Images.
      *
      * @param string $prefix
      * @return void
@@ -99,11 +99,11 @@ class ImageableRequest extends FormRequest
     private function validateImages($prefix = 'image'): void
     {
         $this->validate([
-            $prefix . 's' => 'required|array',
-            $prefix . 's.*.name' => 'nullable|string|max:255',
-            $prefix . 's.*.short_description' => 'nullable|string|max:5000',
-            $prefix . 's.*.description' => 'nullable|string|max:5000',
-            $prefix . 's.*.image' => 'required|image',
+            $prefix.'s' => 'required|array',
+            $prefix.'s.*.name' => 'nullable|string|max:255',
+            $prefix.'s.*.short_description' => 'nullable|string|max:5000',
+            $prefix.'s.*.description' => 'nullable|string|max:5000',
+            $prefix.'s.*.image' => 'required|image',
         ]);
     }
 }
