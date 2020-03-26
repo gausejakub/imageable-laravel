@@ -6,6 +6,5 @@ class ImagesController
 {
     public function store()
     {
-
     }
 }

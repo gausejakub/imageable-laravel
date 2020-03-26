@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1449e9a2-b80a-456f-bb56-a030fa54ab45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/Unit/Models/ImageTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Image.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Requests/ImageableRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Requests/ImageableRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Console/Commands/ImportImages.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Console/Commands/ImportImages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Http/Controllers/ImagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Http/Controllers/ImagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Endpoints/API/StoreImageEndpointTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Endpoints/API/StoreImageEndpointTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/LaravelTestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/LaravelTestCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ImageTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Requests/ImageableRequestTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Requests/ImageableRequestTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/Console/Commands/ImportImagesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Console/Commands/ImportImagesTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,12 +154,23 @@
       <workItem from="1585138566264" duration="158000" />
       <workItem from="1585138968629" duration="134000" />
       <workItem from="1585139118762" duration="29000" />
-      <workItem from="1585166686704" duration="5592000" />
+      <workItem from="1585166686704" duration="5819000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="461" y="128" key="#StoreImageEndpointTest.can_call_store_image_endpoint" timestamp="1585167508106">
@@ -182,6 +189,14 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="421" y="40" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1585168874470" />
+    <state x="168" y="94" key="MergeDialog" timestamp="1585206171186">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="168" y="94" key="MergeDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585206171186" />
+    <state x="547" y="239" key="MultipleFileMergeDialog" timestamp="1585206171218">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="547" y="239" key="MultipleFileMergeDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585206171218" />
     <state x="615" y="332" key="NewPhpClassDialog" timestamp="1585168989774">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -218,9 +233,9 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="533" y="314" width="700" height="530" key="recent.locations.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585171685225" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1585170949007">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1585206142174">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585170949007" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585206142174" />
   </component>
 </project>
