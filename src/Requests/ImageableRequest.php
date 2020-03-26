@@ -24,6 +24,7 @@ class ImageableRequest extends FormRequest
         foreach ($this->{$prefix.'s'} as $image) {
             // TODO: save Image to prefered storage
             $fileName = 'NewImageName';
+            $originalFileName = 'OriginalFileName';
             $fileExtension = 'jpg';
             $fileSize = 69;
 
@@ -33,6 +34,7 @@ class ImageableRequest extends FormRequest
                 'description' => $this->{$prefix.'_description'},
                 'file_name' => $fileName,
                 'file_extension' => $fileExtension,
+                'original_file_name' => $originalFileName,
                 'file_size' => $fileSize,
                 'model_id' => $model ? $model->id : null,
                 'model_type' => $model ? get_class($model) : null,
@@ -57,6 +59,7 @@ class ImageableRequest extends FormRequest
 
         // TODO: save Image to prefered storage
         $fileName = 'NewImageName';
+        $originalFileName = 'OriginalFileName';
         $fileExtension = 'jpg';
         $fileSize = 69;
 
@@ -67,6 +70,7 @@ class ImageableRequest extends FormRequest
             'file_name' => $fileName,
             'file_extension' => $fileExtension,
             'file_size' => $fileSize,
+            'original_file_name' => $originalFileName,
             'model_id' => $model ? $model->id : null,
             'model_type' => $model ? get_class($model) : null,
         ]);
