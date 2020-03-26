@@ -45,7 +45,7 @@ class ImageableRequest extends FormRequest
     }
 
     /**
-     * Creates and saves Image from Request
+     * Creates and saves Image from Request.
      *
      * @param string $prefix
      * @param \Illuminate\Database\Eloquent\Model $model
@@ -74,9 +74,8 @@ class ImageableRequest extends FormRequest
         return $image;
     }
 
-
     /**
-     * Validate if Request is suitable for creating Image
+     * Validate if Request is suitable for creating Image.
      *
      * @param string $prefix
      * @return void

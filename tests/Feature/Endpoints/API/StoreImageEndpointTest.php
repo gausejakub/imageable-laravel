@@ -3,7 +3,6 @@
 namespace Gause\ImageableLaravel\Tests\Feature\Endpoints\API;
 
 use Gause\ImageableLaravel\Tests\LaravelTestCase;
-use Illuminate\Support\Facades\App;
 
 class StoreImageEndpointTest extends LaravelTestCase
 {

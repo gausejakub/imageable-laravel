@@ -9,7 +9,7 @@ class LaravelTestCase extends TestCase
     public function getPackageProviders($app)
     {
         return [
-            \Gause\ImageableLaravel\ImageableLaravelServiceProvider::class
+            \Gause\ImageableLaravel\ImageableLaravelServiceProvider::class,
         ];
     }
 
@@ -22,7 +22,7 @@ class LaravelTestCase extends TestCase
 
     public function getEnvironmentSetUp($app)
     {
-        include_once __DIR__ . '/../database/migrations/create_images_table.php.stub';
+        include_once __DIR__.'/../database/migrations/create_images_table.php.stub';
 
         (new \CreateImagesTable())->up();
     }

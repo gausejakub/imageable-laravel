@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1449e9a2-b80a-456f-bb56-a030fa54ab45" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ImageableLaravelServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ImageableLaravelServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Image.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Requests/ImageableRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Requests/ImageableRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Requests/ImageableRequestTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Requests/ImageableRequestTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Endpoints/API/StoreImageEndpointTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Endpoints/API/StoreImageEndpointTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/LaravelTestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/LaravelTestCase.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +162,7 @@
       <workItem from="1585139118762" duration="29000" />
       <workItem from="1585166686704" duration="6171000" />
       <workItem from="1585207804144" duration="88000" />
-      <workItem from="1585251432217" duration="3544000" />
+      <workItem from="1585251432217" duration="4191000" />
     </task>
     <servers />
   </component>
@@ -206,18 +207,26 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585166744278" />
-    <state x="421" y="40" key="CommitChangelistDialog2" timestamp="1585168874470">
+    <state x="421" y="40" key="CommitChangelistDialog2" timestamp="1585255523286">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="421" y="40" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1585168874470" />
-    <state x="168" y="94" key="MergeDialog" timestamp="1585206171186">
+    <state x="421" y="40" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1585255523286" />
+    <state width="330" height="606" key="Diff.GoToChangePopup" timestamp="1585255401584">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="168" y="94" key="MergeDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585206171186" />
-    <state x="547" y="239" key="MultipleFileMergeDialog" timestamp="1585206171218">
+    <state width="330" height="606" key="Diff.GoToChangePopup/0.0.1680.1050@0.0.1680.1050" timestamp="1585255401584" />
+    <state x="99" y="57" width="1480" height="890" key="DiffContextDialog" timestamp="1585255564587">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="99" y="57" width="1480" height="890" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1585255564587" />
+    <state x="168" y="94" key="MergeDialog" timestamp="1585255709870">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="547" y="239" key="MultipleFileMergeDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585206171218" />
+    <state x="168" y="94" key="MergeDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585255709870" />
+    <state x="547" y="239" key="MultipleFileMergeDialog" timestamp="1585255709920">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="547" y="239" key="MultipleFileMergeDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585255709920" />
     <state x="615" y="332" key="NewPhpClassDialog" timestamp="1585168989774">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -230,6 +239,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="289" y="152" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1585253277620" />
+    <state x="540" y="290" key="Vcs.Multiple.Commit.Info.Dialog.Key" timestamp="1585255686384">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="540" y="290" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.0.1680.1050@0.0.1680.1050" timestamp="1585255686384" />
     <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1585119906119">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -238,10 +251,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="168" y="451" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585251453195" />
-    <state x="622" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585167964946">
+    <state x="622" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585255460309">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="622" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1050@0.0.1680.1050" timestamp="1585167964946" />
+    <state x="622" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1050@0.0.1680.1050" timestamp="1585255460309" />
     <state x="512" y="169" width="936" height="712" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1585169822253">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -250,13 +263,17 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="411" y="88" width="858" height="873" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585167496742" />
+    <state x="615" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1585255505438">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="615" y="311" key="git4idea.merge.GitMergeDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585255505438" />
     <state x="533" y="314" width="700" height="530" key="recent.locations.popup" timestamp="1585171685225">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="533" y="314" width="700" height="530" key="recent.locations.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585171685225" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1585252723940">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1585255123550">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585252723940" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585255123550" />
   </component>
 </project>

@@ -21,7 +21,7 @@ class Image extends Model
     protected $table = 'images';
 
     /**
-     * Defines relationship with model
+     * Defines relationship with model.
      *
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
      */
