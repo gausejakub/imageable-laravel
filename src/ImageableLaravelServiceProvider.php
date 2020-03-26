@@ -31,10 +31,16 @@ class ImageableLaravelServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app->bind('image', function () {
-            return new Image;
-        });
-
         $this->mergeConfigFrom(__DIR__.'/../config/imageable-laravel.php', 'imageable-laravel');
+
+        /*
+        * Register the service provider for the dependency.
+        */
+        $this->app->register(\Intervention\Image\ImageServiceProvider::class);
+        /*
+         * Create aliases for the dependency.
+         */
+        $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+        $loader->alias('Image', \Intervention\Image\Facades\Image::class);
     }
 }

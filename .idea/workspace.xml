@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1449e9a2-b80a-456f-bb56-a030fa54ab45" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/create_images_table.php.stub" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/create_images_table.php.stub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Facades/ImageFacade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ImageableLaravelServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ImageableLaravelServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Image.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Requests/ImageableRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Requests/ImageableRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/ImageTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Models/ImageTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/Requests/ImageableRequestTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Requests/ImageableRequestTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,13 +130,13 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.ImageableRequestTest">
+  <component name="RunManager" selected="PHPUnit.ImageableRequestTest.can_create_image">
     <configuration name="ImageableRequestTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Gause\ImageableLaravel\Tests\ImageableRequestTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Requests/ImageableRequestTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="ImageableRequestTest.can_create_image" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\ImageableRequestTest" file="$PROJECT_DIR$/tests/Unit/Requests/ImageableRequestTest.php" method="can_create_image" scope="Method" />
+      <TestRunner class="Gause\ImageableLaravel\Tests\ImageableRequestTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Requests/ImageableRequestTest.php" method="can_create_image" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ImageableRequestTest.name_has_to_be_string" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -157,10 +157,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.ImageableRequestTest.can_create_image" />
         <item itemvalue="PHPUnit.ImageableRequestTest" />
         <item itemvalue="PHPUnit.ImageableRequestTest.name_is_nullable" />
         <item itemvalue="PHPUnit.ImageableRequestTest.name_has_to_be_string" />
-        <item itemvalue="PHPUnit.ImageableRequestTest.can_create_image" />
         <item itemvalue="PHPUnit.StoreImageEndpointTest.can_call_store_image_endpoint" />
       </list>
     </recent_temporary>
@@ -181,7 +181,7 @@
       <workItem from="1585139118762" duration="29000" />
       <workItem from="1585166686704" duration="6171000" />
       <workItem from="1585207804144" duration="88000" />
-      <workItem from="1585251432217" duration="5464000" />
+      <workItem from="1585251432217" duration="7157000" />
     </task>
     <servers />
   </component>
@@ -238,22 +238,22 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="99" y="57" width="1480" height="890" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1585255564587" />
-    <state width="1638" height="276" key="GridCell.Tab.0.bottom" timestamp="1585257087478">
+    <state width="1638" height="276" key="GridCell.Tab.0.bottom" timestamp="1585258712294">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="276" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585257087478" />
-    <state width="1638" height="276" key="GridCell.Tab.0.center" timestamp="1585257087477">
+    <state width="1638" height="276" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585258712294" />
+    <state width="1638" height="276" key="GridCell.Tab.0.center" timestamp="1585258712291">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="276" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585257087477" />
-    <state width="1638" height="276" key="GridCell.Tab.0.left" timestamp="1585257087476">
+    <state width="1638" height="276" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585258712291" />
+    <state width="1638" height="276" key="GridCell.Tab.0.left" timestamp="1585258712289">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="276" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585257087476" />
-    <state width="1638" height="276" key="GridCell.Tab.0.right" timestamp="1585257087478">
+    <state width="1638" height="276" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585258712289" />
+    <state width="1638" height="276" key="GridCell.Tab.0.right" timestamp="1585258712292">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="276" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585257087478" />
+    <state width="1638" height="276" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585258712292" />
     <state x="168" y="94" key="MergeDialog" timestamp="1585255709870">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -286,10 +286,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="168" y="451" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585251453195" />
-    <state x="622" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585255460309">
+    <state x="622" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585258628106">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="622" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1050@0.0.1680.1050" timestamp="1585255460309" />
+    <state x="622" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1050@0.0.1680.1050" timestamp="1585258628106" />
     <state x="512" y="169" width="936" height="712" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1585169822253">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

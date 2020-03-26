@@ -4,6 +4,7 @@ namespace Gause\ImageableLaravel\Tests;
 
 use Gause\ImageableLaravel\Requests\ImageableRequest;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 
 class ImageableRequestTest extends LaravelTestCase
 {

@@ -32,7 +32,6 @@
                 "Gause\\ImageableLaravel\\ImageableLaravelServiceProvider"
             ],
             "aliases": {
-                "Image": "\\Gause\\ImageableLaravel\\Facades\\Image"
             }
         }
     }

@@ -5,7 +5,6 @@ namespace Gause\ImageableLaravel\Requests;
 use Gause\ImageableLaravel\Models\Image;
 use Illuminate\Foundation\Http\FormRequest;
 
-// TODO: test me please
 class ImageableRequest extends FormRequest
 {
     /**
@@ -57,11 +56,14 @@ class ImageableRequest extends FormRequest
     {
         $this->validateImage($prefix);
 
-        // TODO: save Image to prefered storage
-        $fileName = 'NewImageName';
-        $originalFileName = 'OriginalFileName';
-        $fileExtension = 'jpg';
-        $fileSize = 69;
+        $img = \Intervention\Image\Facades\Image::make($this->{$prefix});//TODO test image saving, size, extensiion, original name
+
+        $fileName = uniqid();
+        $fileSize = $this->{$prefix}->getSize();
+        $fileExtension = $this->{$prefix}->getExtension();
+        $originalFileName = $this->{$prefix}->getClientOriginalName();
+
+        $img->save($fileName . '.' . $fileExtension);
 
         $image = Image::create([
             'name' => $this->{$prefix.'_name'},
