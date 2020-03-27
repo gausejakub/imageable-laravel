@@ -57,7 +57,7 @@ class ExampleRequest extends ImageableRequest
 ```
 
 ```php
-public function store(\Illuminate\Http\Request $request) 
+public function store(\App\Requests\ExampleRequest $request) 
 {
     $image = $request->createImage();
 }
