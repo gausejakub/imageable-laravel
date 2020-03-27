@@ -4,7 +4,7 @@ namespace Gause\ImageableLaravel\Traits;
 
 use Gause\ImageableLaravel\Models\Image;
 
-trait Imageable
+trait UsesImages
 {
     public function images()
     {

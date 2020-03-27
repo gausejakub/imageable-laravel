@@ -3,7 +3,7 @@
 namespace Gause\ImageableLaravel\Tests\Unit\Traits;
 
 use Gause\ImageableLaravel\Tests\LaravelTestCase;
-use Gause\ImageableLaravel\Traits\Imageable;
+use Gause\ImageableLaravel\Traits\UsesImages;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
 
@@ -20,5 +20,5 @@ class HasImagesTest extends LaravelTestCase
 
 class ImageableTraitDummyModel extends Model
 {
-    use Imageable;
+    use UsesImages;
 }
