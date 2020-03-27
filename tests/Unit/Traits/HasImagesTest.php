@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Gause\ImageableLaravel\Tests\Unit\Traits;
-
 
 use Gause\ImageableLaravel\Tests\LaravelTestCase;
 use Gause\ImageableLaravel\Traits\Imageable;
@@ -19,7 +17,6 @@ class HasImagesTest extends LaravelTestCase
         $this->assertInstanceOf(Relation::class, $model->images());
     }
 }
-
 
 class ImageableTraitDummyModel extends Model
 {
