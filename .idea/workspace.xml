@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1449e9a2-b80a-456f-bb56-a030fa54ab45" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tests/Unit/Traits/HasImagesTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/imageable-laravel.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/imageable-laravel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Imageable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Imageable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ImageableTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ImageableTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Traits/Imageable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traits/Imageable.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,18 +122,19 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/Helpers/Traits" />
       <recent name="$PROJECT_DIR$/tests/Unit/Models" />
       <recent name="$PROJECT_DIR$/database/migrations" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.ImageableTest.saving_image_can_create_thumbnail">
-    <configuration name="ImageableRequestTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\ImageableRequestTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Requests/ImageableRequestTest.php" scope="Class" />
+  <component name="RunManager" selected="PHPUnit.HasImagesTest">
+    <configuration name="HasImagesTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Traits\HasImagesTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Traits/HasImagesTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="ImageableRequestTest.image_is_stored_in_storage" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\ImageableRequestTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Requests/ImageableRequestTest.php" method="image_is_stored_in_storage" scope="Method" />
+    <configuration name="HasImagesTest.trait_defines_images_relationship" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Traits\HasImagesTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Traits/HasImagesTest.php" method="trait_defines_images_relationship" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ImageableTest.can_save_to_storage" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -155,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.HasImagesTest" />
+        <item itemvalue="PHPUnit.HasImagesTest.trait_defines_images_relationship" />
         <item itemvalue="PHPUnit.ImageableTest.saving_image_can_create_thumbnail" />
         <item itemvalue="PHPUnit.ImageableTest.save_image_method_returns_array_with_saved_image_details" />
         <item itemvalue="PHPUnit.ImageableTest.can_save_to_storage" />
-        <item itemvalue="PHPUnit.ImageableRequestTest" />
-        <item itemvalue="PHPUnit.ImageableRequestTest.image_is_stored_in_storage" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +180,7 @@
       <workItem from="1585166686704" duration="6171000" />
       <workItem from="1585207804144" duration="88000" />
       <workItem from="1585251432217" duration="7423000" />
-      <workItem from="1585298413169" duration="11385000" />
+      <workItem from="1585298413169" duration="12437000" />
     </task>
     <servers />
   </component>
@@ -233,10 +233,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585166744278" />
-    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1585311786507">
+    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1585341327083">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585311786507" />
+    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585341327083" />
     <state x="421" y="40" key="CommitChangelistDialog2" timestamp="1585255523286">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -249,22 +249,22 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="99" y="57" width="1480" height="890" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1585255564587" />
-    <state width="1638" height="276" key="GridCell.Tab.0.bottom" timestamp="1585339906592">
+    <state width="1638" height="276" key="GridCell.Tab.0.bottom" timestamp="1585341356917">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="276" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585339906592" />
-    <state width="1638" height="276" key="GridCell.Tab.0.center" timestamp="1585339906591">
+    <state width="1638" height="276" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585341356917" />
+    <state width="1638" height="276" key="GridCell.Tab.0.center" timestamp="1585341356916">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="276" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585339906591" />
-    <state width="1638" height="276" key="GridCell.Tab.0.left" timestamp="1585339906590">
+    <state width="1638" height="276" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585341356916" />
+    <state width="1638" height="276" key="GridCell.Tab.0.left" timestamp="1585341356915">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="276" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585339906590" />
-    <state width="1638" height="276" key="GridCell.Tab.0.right" timestamp="1585339906591">
+    <state width="1638" height="276" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585341356915" />
+    <state width="1638" height="276" key="GridCell.Tab.0.right" timestamp="1585341356917">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="276" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585339906591" />
+    <state width="1638" height="276" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585341356917" />
     <state x="168" y="94" key="MergeDialog" timestamp="1585255709870">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -273,10 +273,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="547" y="239" key="MultipleFileMergeDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585255709920" />
-    <state x="615" y="332" key="NewPhpClassDialog" timestamp="1585313431606">
+    <state x="615" y="332" key="NewPhpClassDialog" timestamp="1585341156963">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="615" y="332" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585313431606" />
+    <state x="615" y="332" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585341156963" />
     <state x="658" y="451" key="NewPhpFileDialog" timestamp="1585167086223">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -317,9 +317,9 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="533" y="314" width="700" height="530" key="recent.locations.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585310743318" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1585314595175">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1585341005352">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585314595175" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585341005352" />
   </component>
 </project>
