@@ -56,4 +56,22 @@ class ImageableTest extends LaravelTestCase
         $this->assertArrayHasKey('fileName', $savedImageData);
         $this->assertArrayHasKey('extension', $savedImageData);
     }
+
+    /** @test */
+    public function saving_image_can_create_thumbnail()
+    {
+        config(['imageable-laravel.thumbnails_enabled' => true]);
+        $savedImageData = $this->imageable->saveImage(UploadedFile::fake()->image('avatar.jpg', 1920, 1024));
+
+        Storage::assertExists($savedImageData['fileName'] . '_thumbnail.' . $savedImageData['extension']);
+    }
+
+    /** @test */
+    public function saving_image_does_not_create_thumbnail_when_disabled_in_config()
+    {
+        config(['imageable-laravel.thumbnails_enabled' => false]);
+        $savedImageData = $this->imageable->saveImage(UploadedFile::fake()->image('avatar.jpg', 1920, 1024));
+
+        Storage::assertMissing($savedImageData['fileName'] . '_thumbnail.' . $savedImageData['extension']);
+    }
 }

@@ -22,12 +22,22 @@ class Imageable
         $exploded = explode('.', $imageFile->getClientOriginalName());
         $fileExtension = end($exploded);
 
-        $filePath = $fileName.'.'.$fileExtension;
+        $filePath = $fileName . '.' . $fileExtension;
 
         $result = Storage::put(
             $filePath,
             $img->encode($fileExtension, 100)
         );
+
+        if (config('imageable-laravel.thumbnails_enabled')) {
+            $img->resize(320, null);
+            $thumbnailPath = $fileName . '_thumbnail.' . $fileExtension;
+
+            $result = Storage::put(
+                $thumbnailPath,
+                $img->encode($fileExtension, 100)
+            );
+        }
 
         return [
             'path' => $filePath,
