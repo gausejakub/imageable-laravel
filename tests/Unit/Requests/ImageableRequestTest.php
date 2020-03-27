@@ -17,7 +17,7 @@ class ImageableRequestTest extends LaravelTestCase
     }
 
     /**
-     * Get Valid attributes for ImageableRequest
+     * Get Valid attributes for ImageableRequest.
      *
      * @param array $overrides
      * @return array
@@ -63,7 +63,7 @@ class ImageableRequestTest extends LaravelTestCase
 
         $image = Image::where('name', 'New Image')->first();
 
-        Storage::assertExists($image->file_name . '.' . $image->file_extension);
+        Storage::assertExists($image->file_name.'.'.$image->file_extension);
     }
 
     /** @test */

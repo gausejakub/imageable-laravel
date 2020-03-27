@@ -19,7 +19,7 @@ class ImageTest extends LaravelTestCase
             'file_name' => 'some_name',
             'file_extension' => 'jpg',
             'file_size' => 69,
-            'original_file_name' => 'OriginalName'
+            'original_file_name' => 'OriginalName',
         ]);
 
         $this->assertDatabaseHas('images', [

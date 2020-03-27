@@ -8,21 +8,21 @@ use Illuminate\Support\Facades\Storage;
 class Imageable
 {
     /**
-     * Save image in storage
+     * Save image in storage.
      *
      * @param $imageFile
      * @return array
      */
     public function saveImage($imageFile): array
     {
-        $img = \Intervention\Image\Facades\Image::make($imageFile);//TODO size, extension, original name
+        $img = \Intervention\Image\Facades\Image::make($imageFile); //TODO size, extension, original name
 
         $fileName = uniqid();
 
         $exploded = explode('.', $imageFile->getClientOriginalName());
         $fileExtension = end($exploded);
 
-        $filePath = $fileName . '.' . $fileExtension;
+        $filePath = $fileName.'.'.$fileExtension;
 
         $result = Storage::put(
             $filePath,
