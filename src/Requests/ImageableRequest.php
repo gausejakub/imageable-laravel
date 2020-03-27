@@ -2,12 +2,20 @@
 
 namespace Gause\ImageableLaravel\Requests;
 
-use Gause\ImageableLaravel\Models\Image;
+use Gause\ImageableLaravel\Imageable;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Support\Facades\Storage;
 
 class ImageableRequest extends FormRequest
 {
+    protected $imageable;
+
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this->imageable = new Imageable();
+    }
+
     /**
      * Creates and saves Images from Request.
      *
@@ -22,25 +30,12 @@ class ImageableRequest extends FormRequest
         $images = [];
 
         foreach ($this->{$prefix.'s'} as $image) {
-            // TODO: save Image to prefered storage
-            $fileName = 'NewImageName';
-            $originalFileName = 'OriginalFileName';
-            $fileExtension = 'jpg';
-            $fileSize = 69;
-
-            $image = Image::create([
-                'name' => $this->{$prefix.'_name'},
-                'short_description' => $this->{$prefix.'_short_description'},
-                'description' => $this->{$prefix.'_description'},
-                'file_name' => $fileName,
-                'file_extension' => $fileExtension,
-                'original_file_name' => $originalFileName,
-                'file_size' => $fileSize,
-                'model_id' => $model ? $model->id : null,
-                'model_type' => $model ? get_class($model) : null,
-            ]);
-
-            $images[] = $image;
+            $images[] = $this->imageable->createImage(
+                $image[$prefix],
+                $image[$prefix . '_short_description'],
+                $image[$prefix . '_description'],
+                $model
+            );
         }
 
         return $images;
@@ -57,52 +52,13 @@ class ImageableRequest extends FormRequest
     {
         $this->validateImage($prefix);
 
-        return $this->makeImage(
+        return $this->imageable->createImage(
             $this->{$prefix},
             $this->{$prefix . '_name'},
             $this->{$prefix . '_short_description'},
             $this->{$prefix . '_description'},
             $model
         );
-    }
-
-    /**
-     * Saves image file to storage and Creates Image model representation of it.
-     *
-     * @param $imageFile
-     * @param string|null $name
-     * @param string|null $shortDescription
-     * @param string|null $description
-     * @param \Illuminate\Database\Eloquent\Model|null $model
-     * @return \Gause\ImageableLaravel\Models\Image
-     */
-    public function makeImage($imageFile, string $name = null, string $shortDescription = null, string $description = null, \Illuminate\Database\Eloquent\Model $model = null): \Gause\ImageableLaravel\Models\Image
-    {
-        $img = \Intervention\Image\Facades\Image::make($imageFile);//TODO size, extension, original name
-
-        $fileName = uniqid();
-        $fileSize = $imageFile->getSize();
-        $originalFileName = $imageFile->getClientOriginalName();
-
-        $exploded = explode('.', $imageFile->getClientOriginalName());
-        $fileExtension = end($exploded);
-
-        $result = Storage::put(
-            $fileName . '.' . $fileExtension,
-            $img->encode($fileExtension, 100)
-        );
-
-        return Image::create([
-            'name' => $name,
-            'short_description' => $shortDescription,
-            'description' => $description,
-            'file_name' => $fileName,
-            'file_extension' => $fileExtension,
-            'file_size' => $fileSize,
-            'original_file_name' => $originalFileName,
-            'model_id' => $model ? $model->id : null,
-            'model_type' => $model ? get_class($model) : null,
-        ]);
     }
 
     /**
