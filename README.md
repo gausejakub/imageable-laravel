@@ -13,15 +13,12 @@ composer require gause/imageable-laravel
 ## Imageable Facade Usage
 
 ```php
-    public function store(\Illuminate\Http\Request $request) 
-    {
-        $image = Imageable::createImage(
-            $request->image_file,
-            $request->name,
-            $request->short_description,
-            $request->description
-        );
-    }
+public function store(\Illuminate\Http\Request $request) 
+{
+    $image = Imageable::createImage(
+        $request->image_file
+    );
+}
 ```
 
 ## ImageableRequest Usage
@@ -60,10 +57,10 @@ class ExampleRequest extends ImageableRequest
 ```
 
 ```php
-    public function store(\Illuminate\Http\Request $request) 
-    {
-        $image = $request->createImage();
-    }
+public function store(\Illuminate\Http\Request $request) 
+{
+    $image = $request->createImage();
+}
 ```
 
 Create image method automatically uses all attributes passed with prefix 'image'.
