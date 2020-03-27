@@ -2,7 +2,6 @@
 
 namespace Gause\ImageableLaravel\Requests;
 
-use Gause\ImageableLaravel\Imageable;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ImageableRequest extends FormRequest
@@ -23,8 +22,8 @@ class ImageableRequest extends FormRequest
         foreach ($this->{$prefix.'s'} as $image) {
             $images[] = \Gause\ImageableLaravel\Facades\Imageable::createImage(
                 $image[$prefix],
-                $image[$prefix . '_short_description'],
-                $image[$prefix . '_description'],
+                $image[$prefix.'_short_description'],
+                $image[$prefix.'_description'],
                 $model
             );
         }
@@ -45,9 +44,9 @@ class ImageableRequest extends FormRequest
 
         return \Gause\ImageableLaravel\Facades\Imageable::createImage(
             $this->{$prefix},
-            $this->{$prefix . '_name'},
-            $this->{$prefix . '_short_description'},
-            $this->{$prefix . '_description'},
+            $this->{$prefix.'_name'},
+            $this->{$prefix.'_short_description'},
+            $this->{$prefix.'_description'},
             $model
         );
     }
