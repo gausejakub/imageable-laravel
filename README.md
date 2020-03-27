@@ -63,12 +63,25 @@ public function store(\Illuminate\Http\Request $request)
 }
 ```
 
-Create image method automatically uses all attributes passed with prefix 'image'.
+Create image method automatically uses all attributes passed with prefix 'image':
+    image -> image file
+    image_name -> name of image in db
+    image_short_description -> short description of image
+    image_description -> description of image
+    
+
 Prefix can be specified as method argument: 
 
 ```php 
-$request->createImage('myOwnPrefix'); 
+$request->createImage('my_own_prefix'); 
 ```
+
+Than arrguments should be passed to endpoint like this:
+
+    my_own_prefix -> image file
+    my_own_prefix_name -> name of image in db
+    my_own_prefix_short_description -> short description of image
+    my_own_prefix_description -> description of image
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
