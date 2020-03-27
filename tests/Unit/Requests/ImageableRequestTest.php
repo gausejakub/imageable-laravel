@@ -2,37 +2,68 @@
 
 namespace Gause\ImageableLaravel\Tests;
 
+use Gause\ImageableLaravel\Models\Image;
 use Gause\ImageableLaravel\Requests\ImageableRequest;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 
 class ImageableRequestTest extends LaravelTestCase
 {
+    public function setUp(): void
+    {
+        parent::setUp();
+
+        Storage::fake();
+    }
+
+    /**
+     * Get Valid attributes for ImageableRequest
+     *
+     * @param array $overrides
+     * @return array
+     */
+    public function getValidAttributes(array $overrides = []): array
+    {
+        return array_merge([
+            'image_name' => 'NewName',
+            'image_short_description' => 'Short description',
+            'image_description' => 'Description',
+            'image' => UploadedFile::fake()->image('avatar.jpg'),
+        ], $overrides);
+    }
+
     /** @test */
     public function can_create_image()
     {
         $this->assertDatabaseMissing('images', [
             'image_name' => 'NewName',
-            'image_short_description' => 'Short description',
-            'image_description' => 'Description',
         ]);
 
         $request = new ImageableRequest();
 
-        $request->merge([
-            'image_name' => 'NewName',
-            'image_short_description' => 'Short description',
-            'image_description' => 'Description',
-            'image' => UploadedFile::fake()->image('avatar.jpg'),
-        ]);
+        $request->merge($this->getValidAttributes());
 
         $request->createImage();
 
         $this->assertDatabaseHas('images', [
             'name' => 'NewName',
-            'short_description' => 'Short description',
-            'description' => 'Description',
         ]);
+    }
+
+    /** @test */
+    public function image_is_stored_in_storage()
+    {
+        $request = new ImageableRequest();
+
+        $request->merge($this->getValidAttributes([
+            'image_name' => 'New Image',
+        ]));
+
+        $request->createImage();
+
+        $image = Image::where('name', 'New Image')->first();
+
+        Storage::assertExists($image->file_name . '.' . $image->file_extension);
     }
 
     /** @test */
