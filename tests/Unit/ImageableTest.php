@@ -63,7 +63,7 @@ class ImageableTest extends LaravelTestCase
         config(['imageable-laravel.thumbnails_enabled' => true]);
         $savedImageData = $this->imageable->saveImage(UploadedFile::fake()->image('avatar.jpg', 1920, 1024));
 
-        Storage::assertExists($savedImageData['fileName'] . '_thumbnail.' . $savedImageData['extension']);
+        Storage::assertExists($savedImageData['fileName'].'_thumbnail.'.$savedImageData['extension']);
     }
 
     /** @test */
@@ -72,6 +72,6 @@ class ImageableTest extends LaravelTestCase
         config(['imageable-laravel.thumbnails_enabled' => false]);
         $savedImageData = $this->imageable->saveImage(UploadedFile::fake()->image('avatar.jpg', 1920, 1024));
 
-        Storage::assertMissing($savedImageData['fileName'] . '_thumbnail.' . $savedImageData['extension']);
+        Storage::assertMissing($savedImageData['fileName'].'_thumbnail.'.$savedImageData['extension']);
     }
 }
