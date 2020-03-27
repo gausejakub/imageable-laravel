@@ -7,15 +7,6 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class ImageableRequest extends FormRequest
 {
-    protected $imageable;
-
-    public function __construct()
-    {
-        parent::__construct();
-
-        $this->imageable = new Imageable();
-    }
-
     /**
      * Creates and saves Images from Request.
      *
@@ -30,7 +21,7 @@ class ImageableRequest extends FormRequest
         $images = [];
 
         foreach ($this->{$prefix.'s'} as $image) {
-            $images[] = $this->imageable->createImage(
+            $images[] = \Gause\ImageableLaravel\Facades\Imageable::createImage(
                 $image[$prefix],
                 $image[$prefix . '_short_description'],
                 $image[$prefix . '_description'],
@@ -52,7 +43,7 @@ class ImageableRequest extends FormRequest
     {
         $this->validateImage($prefix);
 
-        return $this->imageable->createImage(
+        return \Gause\ImageableLaravel\Facades\Imageable::createImage(
             $this->{$prefix},
             $this->{$prefix . '_name'},
             $this->{$prefix . '_short_description'},

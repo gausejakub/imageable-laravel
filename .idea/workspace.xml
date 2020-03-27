@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1449e9a2-b80a-456f-bb56-a030fa54ab45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Imageable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/ImageableTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Facades/Imageable.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ImageableLaravelServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ImageableLaravelServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Requests/ImageableRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Requests/ImageableRequest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +181,7 @@
       <workItem from="1585166686704" duration="6171000" />
       <workItem from="1585207804144" duration="88000" />
       <workItem from="1585251432217" duration="7423000" />
-      <workItem from="1585298413169" duration="7842000" />
+      <workItem from="1585298413169" duration="8256000" />
     </task>
     <servers />
   </component>
@@ -273,10 +274,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="547" y="239" key="MultipleFileMergeDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585255709920" />
-    <state x="615" y="332" key="NewPhpClassDialog" timestamp="1585311551457">
+    <state x="615" y="332" key="NewPhpClassDialog" timestamp="1585313431606">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="615" y="332" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585311551457" />
+    <state x="615" y="332" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585313431606" />
     <state x="658" y="451" key="NewPhpFileDialog" timestamp="1585167086223">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

@@ -33,6 +33,10 @@ class ImageableLaravelServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../config/imageable-laravel.php', 'imageable-laravel');
 
+        $this->app->bind('imageable', function () {
+            return new Imageable();
+        });
+
         /*
         * Register the service provider for the dependency.
         */
