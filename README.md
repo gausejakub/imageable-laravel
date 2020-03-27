@@ -10,12 +10,67 @@ Use composer to require package to Your project.
 composer require gause/imageable-laravel
 ```
 
-## Usage
+## Imageable Facade Usage
 
 ```php
-use Gause\ImageableLaravel\Image;
+    public function store(\Illuminate\Http\Request $request) 
+    {
+        $image = Imageable::createImage(
+            $request->image_file,
+            $request->name,
+            $request->short_description,
+            $request->description
+        );
+    }
+```
 
-$image = new Image();
+## ImageableRequest Usage
+
+```php
+<?php
+
+namespace App\Requests;
+
+use Gause\ImageableLaravel\Requests\ImageableRequest;
+
+class ExampleRequest extends ImageableRequest
+{
+    /**
+     *  Authorize requests
+     *
+     *  return bool
+     */
+    public function authorize(): bool
+    {
+        return true;
+    }
+
+    /**
+     *  Defines rules for validating request
+     *
+     *  return array
+     */
+    public function rules(): array
+    {
+        return [
+        ];
+    }
+}
+
+```
+
+```php
+    public function store(\Illuminate\Http\Request $request) 
+    {
+        $image = $request->createImage();
+    }
+```
+
+Create image method automatically uses all attributes passed with prefix 'image'.
+Prefix can be specified as method argument: 
+
+```php 
+$request->createImage('myOwnPrefix'); 
 ```
 
 ## Contributing
