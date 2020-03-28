@@ -22,8 +22,9 @@ class ImageableRequest extends FormRequest
         foreach ($this->{$prefix.'s'} as $image) {
             $images[] = \Gause\ImageableLaravel\Facades\Imageable::createImage(
                 $image[$prefix],
-                $image[$prefix.'_short_description'],
-                $image[$prefix.'_description'],
+                array_key_exists($prefix.'_name', $image) ? $image[$prefix.'_name'] : null,
+                array_key_exists($prefix.'_short_description', $image) ? $image[$prefix.'_short_description'] : null,
+                array_key_exists($prefix.'_description', $image) ? $image[$prefix.'_description'] : null,
                 $model
             );
         }
@@ -82,5 +83,27 @@ class ImageableRequest extends FormRequest
             $prefix.'s.*.description' => 'nullable|string|max:5000',
             $prefix.'s.*.image' => 'required|image',
         ]);
+    }
+
+    /**
+     * Determinates if request has image
+     *
+     * @param string $prefix
+     * @return bool
+     */
+    public function hasImage($prefix = 'image'): bool
+    {
+        return $this->{$prefix} !== null;
+    }
+
+    /**
+     * Determinates if request has images
+     *
+     * @param string $prefix
+     * @return bool
+     */
+    public function hasImages($prefix = 'image'): bool
+    {
+        return $this->{$prefix . 's'}  !== null && !empty($this->{$prefix . 's'});
     }
 }

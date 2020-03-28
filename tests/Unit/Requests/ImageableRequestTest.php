@@ -67,6 +67,64 @@ class ImageableRequestTest extends LaravelTestCase
     }
 
     /** @test */
+    public function can_check_if_image_is_present_in_request()
+    {
+        $request = new ImageableRequest();
+
+        $this->assertFalse($request->hasImage('image'));
+
+        $request->merge($this->getValidAttributes());
+
+        $this->assertTrue($request->hasImage('image'));
+    }
+
+    /** @test */
+    public function has_image_has_default_prefix_image()
+    {
+        $request = new ImageableRequest();
+
+        $this->assertFalse($request->hasImage());
+
+        $request->merge($this->getValidAttributes());
+
+        $this->assertTrue($request->hasImage());
+    }
+
+    /** @test */
+    public function can_check_if_images_is_present_in_request()
+    {
+        $request = new ImageableRequest();
+
+        $this->assertFalse($request->hasImages('image'));
+
+        $request->merge([
+            'images' => [
+                0 => $this->getValidAttributes(),
+                1 => $this->getValidAttributes(),
+            ],
+        ]);
+
+        $this->assertTrue($request->hasImages('image'));
+    }
+
+    /** @test */
+    public function has_images_has_default_prefix_image()
+    {
+        $request = new ImageableRequest();
+
+        $this->assertFalse($request->hasImages());
+
+        $request->merge([
+            'images' => [
+               0 => $this->getValidAttributes(),
+               1 => $this->getValidAttributes(),
+            ],
+        ]);
+
+        $this->assertTrue($request->hasImages());
+    }
+
+    /** @test */
     public function name_is_nullable()
     {
         $exceptionThrown = false;
