@@ -23,7 +23,7 @@ class ImagesController
     }
 
     /**
-     * Handles Create image request
+     * Handles Create image request.
      *
      * @param ImageableRequest $request
      * @return JsonResponse
@@ -41,7 +41,7 @@ class ImagesController
     }
 
     /**
-     * Handles Create images request
+     * Handles Create images request.
      *
      * @param ImageableRequest $request
      * @return JsonResponse
@@ -59,7 +59,7 @@ class ImagesController
     }
 
     /**
-     * Get model from request, if model_type & model_id provided
+     * Get model from request, if model_type & model_id provided.
      *
      * @param ImageableRequest $request
      * @return \Illuminate\Database\Eloquent\Model|null
@@ -70,10 +70,8 @@ class ImagesController
             try {
                 return $request->model_type::find($request->model_id);
             } catch (\Exception $e) { // Not existing model, or not existing model id, or model type is not even model
-                return null;
+                return;
             }
         }
-        return null;
     }
-
 }
