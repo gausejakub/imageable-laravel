@@ -14,9 +14,7 @@ class ImageableLaravelServiceProvider extends ServiceProvider
             ]);
         }
 
-//        if (config('imageable-laravel.routes_enabled')) {
-//            \Illuminate\Support\Facades\Route::post('/api/images', '\Gause\ImageableLaravel\Http\Controllers\ImagesController@store');
-//        }
+        $this->loadRoutesFrom(__DIR__.'/../routes/api.php');
 
         $this->publishes([
             __DIR__.'/../config/imageable-laravel.php' => base_path('config/imageable-laravel.php'),

@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1449e9a2-b80a-456f-bb56-a030fa54ab45" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Helpers/CreateDummiesTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Helpers/DummyModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/ImageTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Models/ImageTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Http/Controllers/ImagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Http/Controllers/ImagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ImageableLaravelServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ImageableLaravelServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Requests/ImageableRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Requests/ImageableRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Endpoints/API/StoreImageEndpointTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Endpoints/API/StoreImageEndpointTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/LaravelTestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/LaravelTestCase.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,25 +134,25 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.ImageTest.can_get_image_file_url">
-    <configuration name="ImageTest.can_get_image_file_url" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Models\ImageTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Models/ImageTest.php" method="can_get_image_file_url" scope="Method" />
+  <component name="RunManager" selected="PHPUnit.StoreImageEndpointTest">
+    <configuration name="StoreImageEndpointTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Feature\Endpoints\API\StoreImageEndpointTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/Endpoints/API/StoreImageEndpointTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="ImageTest.can_get_path" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Models\ImageTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Models/ImageTest.php" method="can_get_path" scope="Method" />
+    <configuration name="StoreImageEndpointTest.calling_endpoint_with_proper_image_attributes_creates_images" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Feature\Endpoints\API\StoreImageEndpointTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/Endpoints/API/StoreImageEndpointTest.php" method="calling_endpoint_with_proper_image_attributes_creates_images" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ImageableRequestTest.has_images_has_default_prefix_image" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\ImageableRequestTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Requests/ImageableRequestTest.php" method="has_images_has_default_prefix_image" scope="Method" />
+    <configuration name="StoreImageEndpointTest.calling_endpoint_with_proper_images_attributes_creates_images" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Feature\Endpoints\API\StoreImageEndpointTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/Endpoints/API/StoreImageEndpointTest.php" method="calling_endpoint_with_proper_images_attributes_creates_images" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ImageableTest.can_delete_image" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\ImageableTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/ImageableTest.php" method="can_delete_image" scope="Method" />
+    <configuration name="StoreImageEndpointTest.can_call_endpoint_to_attach_images_to_model" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Feature\Endpoints\API\StoreImageEndpointTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/Endpoints/API/StoreImageEndpointTest.php" method="can_call_endpoint_to_attach_images_to_model" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ImageableTest.deleting_image_also_deletes_image_from_stroage" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\ImageableTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/ImageableTest.php" method="deleting_image_also_deletes_image_from_stroage" scope="Method" />
+    <configuration name="StoreImageEndpointTest.can_call_endpoint_with_model" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Feature\Endpoints\API\StoreImageEndpointTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/Endpoints/API/StoreImageEndpointTest.php" method="can_call_endpoint_with_model" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -155,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.ImageTest.can_get_image_file_url" />
-        <item itemvalue="PHPUnit.ImageableTest.can_delete_image" />
-        <item itemvalue="PHPUnit.ImageTest.can_get_path" />
-        <item itemvalue="PHPUnit.ImageableTest.deleting_image_also_deletes_image_from_stroage" />
-        <item itemvalue="PHPUnit.ImageableRequestTest.has_images_has_default_prefix_image" />
+        <item itemvalue="PHPUnit.StoreImageEndpointTest" />
+        <item itemvalue="PHPUnit.StoreImageEndpointTest.can_call_endpoint_to_attach_images_to_model" />
+        <item itemvalue="PHPUnit.StoreImageEndpointTest.calling_endpoint_with_proper_images_attributes_creates_images" />
+        <item itemvalue="PHPUnit.StoreImageEndpointTest.can_call_endpoint_with_model" />
+        <item itemvalue="PHPUnit.StoreImageEndpointTest.calling_endpoint_with_proper_image_attributes_creates_images" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +186,7 @@
       <workItem from="1585166686704" duration="6171000" />
       <workItem from="1585207804144" duration="88000" />
       <workItem from="1585251432217" duration="7423000" />
-      <workItem from="1585298413169" duration="21037000" />
+      <workItem from="1585298413169" duration="28178000" />
     </task>
     <servers />
   </component>
@@ -233,14 +239,14 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585166744278" />
-    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1585341327083">
+    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1585427370439">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585341327083" />
-    <state x="421" y="40" key="CommitChangelistDialog2" timestamp="1585255523286">
+    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585427370439" />
+    <state x="421" y="40" key="CommitChangelistDialog2" timestamp="1585425312376">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="421" y="40" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1585255523286" />
+    <state x="421" y="40" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1585425312376" />
     <state width="330" height="606" key="Diff.GoToChangePopup" timestamp="1585255401584">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -249,22 +255,22 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="99" y="57" width="1480" height="890" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1585255564587" />
-    <state width="1638" height="273" key="GridCell.Tab.0.bottom" timestamp="1585408734807">
+    <state width="1638" height="273" key="GridCell.Tab.0.bottom" timestamp="1585429152433">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585408734807" />
-    <state width="1638" height="273" key="GridCell.Tab.0.center" timestamp="1585408734806">
+    <state width="1638" height="273" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585429152433" />
+    <state width="1638" height="273" key="GridCell.Tab.0.center" timestamp="1585429152431">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585408734806" />
-    <state width="1638" height="273" key="GridCell.Tab.0.left" timestamp="1585408734804">
+    <state width="1638" height="273" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585429152431" />
+    <state width="1638" height="273" key="GridCell.Tab.0.left" timestamp="1585429152430">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585408734804" />
-    <state width="1638" height="273" key="GridCell.Tab.0.right" timestamp="1585408734806">
+    <state width="1638" height="273" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585429152430" />
+    <state width="1638" height="273" key="GridCell.Tab.0.right" timestamp="1585429152432">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585408734806" />
+    <state width="1638" height="273" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585429152432" />
     <state x="168" y="94" key="MergeDialog" timestamp="1585255709870">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -273,14 +279,14 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="547" y="239" key="MultipleFileMergeDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585255709920" />
-    <state x="615" y="332" key="NewPhpClassDialog" timestamp="1585341156963">
+    <state x="615" y="332" key="NewPhpClassDialog" timestamp="1585427744157">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="615" y="332" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585341156963" />
-    <state x="658" y="451" key="NewPhpFileDialog" timestamp="1585167086223">
+    <state x="615" y="332" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585427744157" />
+    <state x="658" y="451" key="NewPhpFileDialog" timestamp="1585427668599">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="658" y="451" key="NewPhpFileDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585167086223" />
+    <state x="658" y="451" key="NewPhpFileDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585427668599" />
     <state x="289" y="152" key="SettingsEditor" timestamp="1585314496448">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -317,9 +323,9 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="533" y="314" width="700" height="530" key="recent.locations.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585310743318" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1585407135692">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1585426424091">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585407135692" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585426424091" />
   </component>
 </project>
