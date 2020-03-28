@@ -32,17 +32,17 @@ class Image extends Model
     }
 
     /**
-     * Returns path to image in storage
+     * Returns path to image in storage.
      *
      * @return string
      */
     public function getPathAttribute(): string
     {
-        return $this->file_name . '.' . $this->file_extension;
+        return $this->file_name.'.'.$this->file_extension;
     }
 
     /**
-     * Returns url to image file
+     * Returns url to image file.
      *
      * @return string
      */
@@ -52,7 +52,7 @@ class Image extends Model
     }
 
     /**
-     * Returns temporary url to image file
+     * Returns temporary url to image file.
      *
      * @return string
      */

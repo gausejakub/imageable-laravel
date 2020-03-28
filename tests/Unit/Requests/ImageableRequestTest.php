@@ -116,8 +116,8 @@ class ImageableRequestTest extends LaravelTestCase
 
         $request->merge([
             'images' => [
-               0 => $this->getValidAttributes(),
-               1 => $this->getValidAttributes(),
+                0 => $this->getValidAttributes(),
+                1 => $this->getValidAttributes(),
             ],
         ]);
 

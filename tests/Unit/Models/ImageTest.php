@@ -62,7 +62,7 @@ class ImageTest extends LaravelTestCase
     /** @test */
     public function can_get_image_file_temp_url()
     {
-         Storage::shouldReceive('temporaryUrl')
+        Storage::shouldReceive('temporaryUrl')
             ->andReturn('example.com/some_name.jpg');
 
         $image = Image::create([

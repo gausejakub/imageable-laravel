@@ -86,7 +86,7 @@ class ImageableRequest extends FormRequest
     }
 
     /**
-     * Determinates if request has image
+     * Determinates if request has image.
      *
      * @param string $prefix
      * @return bool
@@ -97,13 +97,13 @@ class ImageableRequest extends FormRequest
     }
 
     /**
-     * Determinates if request has images
+     * Determinates if request has images.
      *
      * @param string $prefix
      * @return bool
      */
     public function hasImages($prefix = 'image'): bool
     {
-        return $this->{$prefix . 's'}  !== null && !empty($this->{$prefix . 's'});
+        return $this->{$prefix.'s'} !== null && ! empty($this->{$prefix.'s'});
     }
 }
