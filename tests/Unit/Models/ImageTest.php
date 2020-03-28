@@ -4,6 +4,7 @@ namespace Gause\ImageableLaravel\Tests\Unit\Models;
 
 use Gause\ImageableLaravel\Models\Image;
 use Gause\ImageableLaravel\Tests\LaravelTestCase;
+use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Facades\Storage;
 
 class ImageTest extends LaravelTestCase
@@ -11,11 +12,14 @@ class ImageTest extends LaravelTestCase
     /** @test */
     public function can_create_image_model()
     {
-        $this->assertDatabaseMissing('images', [
-            'name' => 'MyNewImage',
-        ]);
+        $refClass = new \ReflectionClass(Image::class);
+        $this->assertTrue($refClass->isSubclassOf(\Illuminate\Database\Eloquent\Model::class));
+    }
 
-        Image::create([
+    /** @test */
+    public function has_model_relationship()
+    {
+        $image = Image::create([
             'name' => 'MyNewImage',
             'file_name' => 'some_name',
             'file_extension' => 'jpg',
@@ -23,9 +27,7 @@ class ImageTest extends LaravelTestCase
             'original_file_name' => 'OriginalName',
         ]);
 
-        $this->assertDatabaseHas('images', [
-            'name' => 'MyNewImage',
-        ]);
+        $this->assertInstanceOf(Relation::class, $image->model());
     }
 
     /** @test */
