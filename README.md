@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.com/KennyJG/imageable-laravel.svg?branch=master)](https://travis-ci.com/KennyJG/imageable-laravel)
-
 # Imageable Laravel 
+
+[![Build Status](https://travis-ci.com/KennyJG/imageable-laravel.svg?branch=master)](https://travis-ci.com/KennyJG/imageable-laravel)
 
 Imageable Laravel is a Laravel library for dealing with images.
 
