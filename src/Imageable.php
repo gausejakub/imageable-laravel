@@ -47,7 +47,7 @@ class Imageable
     }
 
     /**
-     * Deletes Image from storage & also deletes thumbnails of image
+     * Deletes Image from storage & also deletes thumbnails of image.
      *
      * @param $path
      * @return void
@@ -57,11 +57,11 @@ class Imageable
         Storage::delete($path);
 
         $explodedPath = explode('.', $path);
-        $explodedPath[count($explodedPath) - 2] = $explodedPath[count($explodedPath) - 2] . '_thumbnail';
+        $explodedPath[count($explodedPath) - 2] = $explodedPath[count($explodedPath) - 2].'_thumbnail';
         $thumbnailPath = implode('.', $explodedPath);
 
-        Storage::exists($path) ? Storage::delete($path): null;
-        Storage::exists($thumbnailPath) ? Storage::delete($thumbnailPath): null;
+        Storage::exists($path) ? Storage::delete($path) : null;
+        Storage::exists($thumbnailPath) ? Storage::delete($thumbnailPath) : null;
     }
 
     /**
@@ -95,7 +95,7 @@ class Imageable
     }
 
     /**
-     * Delete Image model and also delete image from storage
+     * Delete Image model and also delete image from storage.
      *
      * @param Image $image
      * @return bool
@@ -104,6 +104,7 @@ class Imageable
     public function deleteImage(\Gause\ImageableLaravel\Models\Image $image): bool
     {
         $this->deleteImageFromStorage($image->path);
+
         return $image->delete();
     }
 }
