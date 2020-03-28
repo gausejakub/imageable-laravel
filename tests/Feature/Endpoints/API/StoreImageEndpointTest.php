@@ -73,7 +73,7 @@ class StoreImageEndpointTest extends LaravelTestCase
                 ],
                 1 => [
                     'image' => $file2,
-                ]
+                ],
             ],
         ]);
     }
@@ -96,7 +96,7 @@ class StoreImageEndpointTest extends LaravelTestCase
                 ],
                 1 => [
                     'image' => $file2,
-                ]
+                ],
             ],
             'model_type' => \Gause\ImageableLaravel\Tests\Helpers\DummyModel::class,
             'model_id' => $dummyModel->id,
