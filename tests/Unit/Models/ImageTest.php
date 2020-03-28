@@ -26,4 +26,18 @@ class ImageTest extends LaravelTestCase
             'name' => 'MyNewImage',
         ]);
     }
+
+    /** @test */
+    public function can_get_path()
+    {
+        $image = Image::create([
+            'name' => 'MyNewImage',
+            'file_name' => 'some_name',
+            'file_extension' => 'jpg',
+            'file_size' => 69,
+            'original_file_name' => 'OriginalName',
+        ]);
+
+        $this->assertEquals('some_name.jpg', $image->path);
+    }
 }

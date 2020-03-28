@@ -47,6 +47,24 @@ class Imageable
     }
 
     /**
+     * Deletes Image from storage & also deletes thumbnails of image
+     *
+     * @param $path
+     * @return void
+     */
+    public function deleteImageFromStorage($path): void
+    {
+        Storage::delete($path);
+
+        $explodedPath = explode('.', $path);
+        $explodedPath[count($explodedPath) - 2] = $explodedPath[count($explodedPath) - 2] . '_thumbnail';
+        $thumbnailPath = implode('.', $explodedPath);
+
+        Storage::exists($path) ? Storage::delete($path): null;
+        Storage::exists($thumbnailPath) ? Storage::delete($thumbnailPath): null;
+    }
+
+    /**
      * Saves image file to storage and Creates Image model representation of it.
      *
      * @param $imageFile
@@ -74,5 +92,18 @@ class Imageable
             'model_id' => $model ? $model->id : null,
             'model_type' => $model ? get_class($model) : null,
         ]);
+    }
+
+    /**
+     * Delete Image model and also delete image from storage
+     *
+     * @param Image $image
+     * @return bool
+     * @throws \Exception
+     */
+    public function deleteImage(\Gause\ImageableLaravel\Models\Image $image): bool
+    {
+        $this->deleteImageFromStorage($image->path);
+        return $image->delete();
     }
 }

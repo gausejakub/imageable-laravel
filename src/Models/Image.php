@@ -30,4 +30,14 @@ class Image extends Model
     {
         return $this->morphTo();
     }
+
+    /**
+     * Returns path to image in storage
+     *
+     * @return string
+     */
+    public function getPathAttribute(): string
+    {
+        return $this->file_name . '.' . $this->file_extension;
+    }
 }

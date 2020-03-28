@@ -74,4 +74,31 @@ class ImageableTest extends LaravelTestCase
 
         Storage::assertMissing($savedImageData['fileName'].'_thumbnail.'.$savedImageData['extension']);
     }
+
+    /** @test */
+    public function can_delete_image()
+    {
+        $image = $this->imageable->createImage(UploadedFile::fake()->image('avatar.jpg'));
+
+        $this->imageable->deleteImage($image);
+
+        $this->assertDatabaseMissing('images', [
+            'id' => $image->id,
+        ]);
+    }
+
+    /** @test */
+    public function deleting_image_also_deletes_image_from_storage()
+    {
+        $image = $this->imageable->createImage(UploadedFile::fake()->image('avatar.jpg'));
+
+        Storage::assertExists($image->file_name . '.' . $image->file_extension);
+
+        $this->imageable->deleteImage($image);
+
+        $this->assertDatabaseMissing('images', [
+            'id' => $image->id,
+        ]);
+        Storage::assertMissing($image->file_name . '.' . $image->file_extension);
+    }
 }
