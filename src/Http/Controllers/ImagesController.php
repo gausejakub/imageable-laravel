@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class ImagesController
 {
     /**
-     * Creates image or images
+     * Creates image or images.
      *
      * @param ImageableRequest $request
      * @return JsonResponse
@@ -32,7 +32,7 @@ class ImagesController
     }
 
     /**
-     * Deletes image
+     * Deletes image.
      *
      * @param Request $request
      * @param Image $image

@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Gause\ImageableLaravel\Tests\Feature\Endpoints\API;
 
 use Gause\ImageableLaravel\Facades\Imageable;
@@ -15,7 +14,7 @@ class DeleteImageEndpointTest extends LaravelTestCase
         $this->withoutExceptionHandling();
         $image = Imageable::createImage(UploadedFile::fake()->image('avatar.jpg'));
 
-        $response = $this->delete('/api/images/' . $image->id);
+        $response = $this->delete('/api/images/'.$image->id);
 
         $response->assertStatus(200);
     }
@@ -29,7 +28,7 @@ class DeleteImageEndpointTest extends LaravelTestCase
             ->with(get_class($image))
             ->once();
 
-        $this->delete('/api/images/' . $image->id);
+        $this->delete('/api/images/'.$image->id);
     }
 
     /** @test */
@@ -40,7 +39,7 @@ class DeleteImageEndpointTest extends LaravelTestCase
             ->once()
             ->andReturn(true);
 
-        $response = $this->delete('/api/images/' . $image->id);
+        $response = $this->delete('/api/images/'.$image->id);
 
         $this->assertTrue(json_decode($response->getContent())->success);
     }
@@ -53,7 +52,7 @@ class DeleteImageEndpointTest extends LaravelTestCase
             ->once()
             ->andReturn(false);
 
-        $response = $this->delete('/api/images/' . $image->id);
+        $response = $this->delete('/api/images/'.$image->id);
 
         $this->assertFalse(json_decode($response->getContent())->success);
     }
@@ -61,7 +60,7 @@ class DeleteImageEndpointTest extends LaravelTestCase
     /** @test */
     public function endpoint_retunrs_404_for_not_existing_image()
     {
-        $response = $this->delete('/api/images/' . 1);
+        $response = $this->delete('/api/images/'. 1);
 
         $response->assertStatus(404);
     }
