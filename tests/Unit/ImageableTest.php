@@ -4,6 +4,7 @@ namespace Gause\ImageableLaravel\Tests\Unit;
 
 use Gause\ImageableLaravel\Events\ImageCreated;
 use Gause\ImageableLaravel\Imageable;
+use Gause\ImageableLaravel\Tests\Helpers\DummyModel;
 use Gause\ImageableLaravel\Tests\LaravelTestCase;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Event;
@@ -39,6 +40,31 @@ class ImageableTest extends LaravelTestCase
         $this->assertDatabaseHas('images', [
             'name' => 'NewName',
         ]);
+    }
+
+    /** @test */
+    public function image_position_is_automatically_assigned_if_model_is_provided()
+    {
+        $dummyModel = DummyModel::create();
+        $image = $this->imageable->createImage(
+            UploadedFile::fake()->image('avatar.jpg'),
+            null,
+            null,
+            null,
+            $dummyModel
+        );
+
+        $this->assertEquals(1, $image->position);
+
+        $secondImage = $this->imageable->createImage(
+            UploadedFile::fake()->image('avatar.jpg'),
+            null,
+            null,
+            null,
+            $dummyModel
+        );
+
+        $this->assertEquals(2, $secondImage->position);
     }
 
     /** @test */
@@ -112,5 +138,49 @@ class ImageableTest extends LaravelTestCase
             'id' => $image->id,
         ]);
         Storage::assertMissing($image->file_name.'.'.$image->file_extension);
+    }
+
+    /** @test */
+    public function deleting_image_updates_positions()
+    {
+        $dummyModel = DummyModel::create();
+        $firstImage = $this->imageable->createImage(UploadedFile::fake()->image('avatar.jpg'), null, null, null, $dummyModel);
+        $secondImage = $this->imageable->createImage(UploadedFile::fake()->image('avatar.jpg'), null, null, null, $dummyModel);
+        $thirdImage = $this->imageable->createImage(UploadedFile::fake()->image('avatar.jpg'), null, null, null, $dummyModel);
+
+        $this->assertEquals(1, $firstImage->position);
+        $this->assertEquals(2, $secondImage->position);
+        $this->assertEquals(3, $thirdImage->position);
+
+        $this->imageable->deleteImage($secondImage);
+
+        $this->assertEquals(1, $firstImage->fresh()->position);
+        $this->assertEquals(2, $thirdImage->fresh()->position);
+    }
+
+    /** @test */
+    public function can_get_next_image_position_for_model()
+    {
+        $dummyModel = DummyModel::create();
+        $firstImage = $this->imageable->createImage(UploadedFile::fake()->image('avatar.jpg'), null, null, null, $dummyModel);
+        $secondImage = $this->imageable->createImage(UploadedFile::fake()->image('avatar.jpg'), null, null, null, $dummyModel);
+        $thirdImage = $this->imageable->createImage(UploadedFile::fake()->image('avatar.jpg'), null, null, null, $dummyModel);
+
+        $nextPosition = $this->imageable->getNextPosition($dummyModel);
+
+        $this->assertEquals(4, $nextPosition);
+    }
+
+    /** @test */
+    public function can_get_images_count_for_model()
+    {
+        $dummyModel = DummyModel::create();
+        $firstImage = $this->imageable->createImage(UploadedFile::fake()->image('avatar.jpg'), null, null, null, $dummyModel);
+        $secondImage = $this->imageable->createImage(UploadedFile::fake()->image('avatar.jpg'), null, null, null, $dummyModel);
+        $thirdImage = $this->imageable->createImage(UploadedFile::fake()->image('avatar.jpg'), null, null, null, $dummyModel);
+
+        $countOfImages = $this->imageable->countOfImages($dummyModel);
+
+        $this->assertEquals(3, $countOfImages);
     }
 }

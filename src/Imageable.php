@@ -90,6 +90,7 @@ class Imageable
             'file_extension' => $savedImageDetails['extension'],
             'file_size' => $fileSize,
             'original_file_name' => $originalFileName,
+            'position' => $model ? $this->getNextPosition($model) : null,
             'model_id' => $model ? $model->id : null,
             'model_type' => $model ? get_class($model) : null,
         ]);
@@ -110,6 +111,41 @@ class Imageable
     {
         $this->deleteImageFromStorage($image->path);
 
+        if ($image->model) { // Move all related Images above down by one
+            $relatedImagesAbove = Image::where('model_id', $image->model_id)
+                ->where('model_type', $image->model_type)
+                ->where('position', '>', $image->position)
+                ->get();
+
+            foreach ($relatedImagesAbove as $relatedImage) {
+                $relatedImage->update(['position' => $relatedImage->position - 1]);
+            }
+        }
+
         return $image->delete();
+    }
+
+    /**
+     * Return next available position of model images
+     *
+     * @param \Illuminate\Database\Eloquent\Model $model
+     * @return int
+     */
+    public function getNextPosition(\Illuminate\Database\Eloquent\Model $model): int
+    {
+        return $this->countOfImages($model) + 1;
+    }
+
+    /**
+     * Return count of model images
+     *
+     * @param \Illuminate\Database\Eloquent\Model $model
+     * @return int
+     */
+    public function countOfImages(\Illuminate\Database\Eloquent\Model $model): int
+    {
+        return Image::where('model_id', $model->id)
+                ->where('model_type', get_class($model))
+                ->count();
     }
 }
