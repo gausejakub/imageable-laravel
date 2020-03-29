@@ -4,7 +4,6 @@
     <list default="true" id="1449e9a2-b80a-456f-bb56-a030fa54ab45" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Imageable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Imageable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Image.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Unit/ImageableTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ImageableTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,25 +128,25 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.ImageableTest.image_position_is_automatically_assigned_if_model_is_provided">
+  <component name="RunManager" selected="PHPUnit.ImageableTest">
     <configuration name="ImageableTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Gause\ImageableLaravel\Tests\Unit\ImageableTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/ImageableTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ImageableTest.can_get_images_count_for_model" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\ImageableTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/ImageableTest.php" method="can_get_images_count_for_model" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ImageableTest.can_get_next_image_position_for_model" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Gause\ImageableLaravel\Tests\Unit\ImageableTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/ImageableTest.php" method="can_get_next_image_position_for_model" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ImageableTest.deleting_image_updates_positions" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\ImageableTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/ImageableTest.php" method="deleting_image_updates_positions" scope="Method" />
+    <configuration name="ImageableTest.can_move_image_position_down_by_one" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\ImageableTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/ImageableTest.php" method="can_move_image_position_down_by_one" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ImageableTest.image_position_is_automatically_assigned_if_model_is_provided" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Gause\ImageableLaravel\Tests\Unit\ImageableTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/ImageableTest.php" method="image_position_is_automatically_assigned_if_model_is_provided" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ImageableTest.trying_move_image_to_position_out_of_positions_range_moves_image_to_highest_possible_position" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\ImageableTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/ImageableTest.php" method="trying_move_image_to_position_out_of_positions_range_moves_image_to_highest_possible_position" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -156,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.ImageableTest" />
+        <item itemvalue="PHPUnit.ImageableTest.trying_move_image_to_position_out_of_positions_range_moves_image_to_highest_possible_position" />
+        <item itemvalue="PHPUnit.ImageableTest.can_move_image_position_down_by_one" />
         <item itemvalue="PHPUnit.ImageableTest.image_position_is_automatically_assigned_if_model_is_provided" />
         <item itemvalue="PHPUnit.ImageableTest.can_get_next_image_position_for_model" />
-        <item itemvalue="PHPUnit.ImageableTest.can_get_images_count_for_model" />
-        <item itemvalue="PHPUnit.ImageableTest.deleting_image_updates_positions" />
-        <item itemvalue="PHPUnit.ImageableTest" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +180,7 @@
       <workItem from="1585166686704" duration="6171000" />
       <workItem from="1585207804144" duration="88000" />
       <workItem from="1585251432217" duration="7423000" />
-      <workItem from="1585298413169" duration="36525000" />
+      <workItem from="1585298413169" duration="40920000" />
     </task>
     <servers />
   </component>
@@ -250,22 +249,22 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="99" y="57" width="1480" height="890" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1585255564587" />
-    <state width="1638" height="273" key="GridCell.Tab.0.bottom" timestamp="1585484146450">
+    <state width="1638" height="273" key="GridCell.Tab.0.bottom" timestamp="1585512861940">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585484146450" />
-    <state width="1638" height="273" key="GridCell.Tab.0.center" timestamp="1585484146448">
+    <state width="1638" height="273" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585512861940" />
+    <state width="1638" height="273" key="GridCell.Tab.0.center" timestamp="1585512861938">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585484146448" />
-    <state width="1638" height="273" key="GridCell.Tab.0.left" timestamp="1585484146447">
+    <state width="1638" height="273" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585512861938" />
+    <state width="1638" height="273" key="GridCell.Tab.0.left" timestamp="1585512861937">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585484146447" />
-    <state width="1638" height="273" key="GridCell.Tab.0.right" timestamp="1585484146449">
+    <state width="1638" height="273" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585512861937" />
+    <state width="1638" height="273" key="GridCell.Tab.0.right" timestamp="1585512861939">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585484146449" />
+    <state width="1638" height="273" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585512861939" />
     <state x="168" y="94" key="MergeDialog" timestamp="1585255709870">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -282,10 +281,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="658" y="451" key="NewPhpFileDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585427668599" />
-    <state x="289" y="152" key="SettingsEditor" timestamp="1585465013746">
+    <state x="289" y="152" key="SettingsEditor" timestamp="1585511420911">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="289" y="152" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1585465013746" />
+    <state x="289" y="152" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1585511420911" />
     <state x="540" y="290" key="Vcs.Multiple.Commit.Info.Dialog.Key" timestamp="1585255686384">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -318,9 +317,9 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="533" y="314" width="700" height="530" key="recent.locations.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585310743318" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1585481932572">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1585512276342">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585481932572" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585512276342" />
   </component>
 </project>

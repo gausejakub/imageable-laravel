@@ -137,6 +137,17 @@ class Imageable
     }
 
     /**
+     * Return currently highest position of model images
+     *
+     * @param \Illuminate\Database\Eloquent\Model $model
+     * @return int
+     */
+    public function getHighestPosition(\Illuminate\Database\Eloquent\Model $model): int // TODO test me
+    {
+        return $this->countOfImages($model);
+    }
+
+    /**
      * Return count of model images
      *
      * @param \Illuminate\Database\Eloquent\Model $model
@@ -147,5 +158,123 @@ class Imageable
         return Image::where('model_id', $model->id)
                 ->where('model_type', get_class($model))
                 ->count();
+    }
+
+    /**
+     * Moves image to given position
+     *
+     * @param Image $image
+     * @param int $position
+     * @return Image
+     * @throws \Exception
+     */
+    public function moveToPosition(Image $image, int $position): Image
+    {
+        $model = $image->model;
+        if ($model == null) {
+            throw new \Exception('Cannot move Image that does not belong to any model scope.');
+        }
+
+        if ($position > $this->getHighestPosition($model)) {
+            $position = $this->getHighestPosition($model);
+        }
+
+        $imagesAbove = Image::where('model_id', $model->id)
+            ->where('model_type', get_class($model))
+            ->where('position', '>', $image->position)
+            ->get();
+
+        foreach ($imagesAbove as $imageAbove) {
+            $imageAbove->update(['position' => $imageAbove->position - 1]);
+        }
+
+        $imagesAboveNewPosition = Image::where('model_id', $model->id)
+            ->where('model_type', get_class($model))
+            ->where('position', '>=', $position)
+            ->where('id', '!=', $image->id)
+            ->get();
+
+        foreach ($imagesAboveNewPosition as $imageAboveNewPosition) {
+            $imageAboveNewPosition->update(['position' => $imageAboveNewPosition->position + 1]);
+        }
+
+        $image->update([
+            'position' => $position
+        ]);
+
+        return $image->fresh();
+    }
+
+    /**
+     * Move Image one position up
+     *
+     * @param Image $image
+     * @return Image
+     * @throws \Exception
+     */
+    public function moveUpPosition(Image $image): Image
+    {
+        if ($image->position == 1) { // TODO: test this
+            return $image;
+        }
+        return $this->moveToPosition($image, $image->position - 1);
+    }
+
+    /**
+     * Move Image one position down
+     *
+     * @param Image $image
+     * @return Image
+     * @throws \Exception
+     */
+    public function moveDownPosition(Image $image): Image
+    {
+        $model = $image->model;
+        if ($model == null) {
+            throw new \Exception('Cannot move Image that does not belong to any model scope.');
+        }
+
+        if ($image->position == $this->getHighestPosition($image->model)) { // TODO: test this
+            return $image;
+        }
+
+        return $this->moveToPosition($image, $image->position + 1);
+    }
+
+    /**
+     * Moves image to top position of its model scope
+     *
+     * @param Image $image
+     * @return Image
+     * @throws \Exception
+     */
+    public function toTopPosition(Image $image): Image
+    {
+        if ($image->position == 1) {
+            return $image;
+        }
+
+        return $this->moveToPosition($image, 1);
+    }
+
+    /**
+     * Moves image to bottom position of its model scope
+     *
+     * @param Image $image
+     * @return Image
+     * @throws \Exception
+     */
+    public function toBottomPosition(Image $image): Image
+    {
+        $model = $image->model;
+        if ($model == null) {
+            throw new \Exception('Cannot move Image that does not belong to any model scope.');
+        }
+
+        if ($image->position == $this->getHighestPosition($model)) {
+            return $image;
+        }
+
+        return $this->moveToPosition($image, $this->getHighestPosition($model));
     }
 }
