@@ -22,6 +22,7 @@ class CreateImagesTable extends Migration
             $table->string('file_extension');
             $table->integer('file_size');
             $table->string('original_file_name');
+            $table->unsignedInteger('position')->nullable();
             $table->nullableMorphs('model');
             $table->unsignedBigInteger('created_by')->nullable();
             $table->timestamps();

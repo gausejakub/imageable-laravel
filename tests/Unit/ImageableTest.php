@@ -2,9 +2,11 @@
 
 namespace Gause\ImageableLaravel\Tests\Unit;
 
+use Gause\ImageableLaravel\Events\ImageCreated;
 use Gause\ImageableLaravel\Imageable;
 use Gause\ImageableLaravel\Tests\LaravelTestCase;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Storage;
 
 class ImageableTest extends LaravelTestCase
@@ -37,6 +39,16 @@ class ImageableTest extends LaravelTestCase
         $this->assertDatabaseHas('images', [
             'name' => 'NewName',
         ]);
+    }
+
+    /** @test */
+    public function image_created_event_is_fired()
+    {
+        Event::fake();
+
+        $this->imageable->createImage(UploadedFile::fake()->image('avatar.jpg'));
+
+        Event::assertDispatched(ImageCreated::class);
     }
 
     /** @test */

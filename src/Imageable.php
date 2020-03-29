@@ -2,6 +2,7 @@
 
 namespace Gause\ImageableLaravel;
 
+use Gause\ImageableLaravel\Events\ImageCreated;
 use Gause\ImageableLaravel\Models\Image;
 use Illuminate\Support\Facades\Storage;
 
@@ -81,7 +82,7 @@ class Imageable
 
         $savedImageDetails = $this->saveImage($imageFile);
 
-        return Image::create([
+        $image = Image::create([
             'name' => $name,
             'short_description' => $shortDescription,
             'description' => $description,
@@ -92,6 +93,10 @@ class Imageable
             'model_id' => $model ? $model->id : null,
             'model_type' => $model ? get_class($model) : null,
         ]);
+
+        event(new ImageCreated($image));
+
+        return $image;
     }
 
     /**
