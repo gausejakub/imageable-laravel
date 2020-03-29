@@ -126,7 +126,7 @@ class Imageable
     }
 
     /**
-     * Return next available position of model images
+     * Return next available position of model images.
      *
      * @param \Illuminate\Database\Eloquent\Model $model
      * @return int
@@ -137,7 +137,7 @@ class Imageable
     }
 
     /**
-     * Return count of model images
+     * Return count of model images.
      *
      * @param \Illuminate\Database\Eloquent\Model $model
      * @return int
