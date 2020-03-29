@@ -104,7 +104,6 @@ class Imageable
     public function deleteImage(\Gause\ImageableLaravel\Models\Image $image): bool
     {
         $this->deleteImageFromStorage($image->path);
-
         return $image->delete();
     }
 }

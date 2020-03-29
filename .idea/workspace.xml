@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1449e9a2-b80a-456f-bb56-a030fa54ab45" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Endpoints/API/DeleteImageEndpointTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/ImageTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Models/ImageTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Http/Controllers/ImagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Http/Controllers/ImagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imageable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Imageable.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +119,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -127,25 +129,25 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.ImageTest.has_model_relationship">
-    <configuration name="ImageTest.has_model_relationship" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Models\ImageTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Models/ImageTest.php" method="has_model_relationship" scope="Method" />
+  <component name="RunManager" selected="PHPUnit.DeleteImageEndpointTest.endpoint_retunrs_404_for_not_existing_image">
+    <configuration name="DeleteImageEndpointTest.endpoint_retunrs_404_for_not_existing_image" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Feature\Endpoints\API\DeleteImageEndpointTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/Endpoints/API/DeleteImageEndpointTest.php" method="endpoint_retunrs_404_for_not_existing_image" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="StoreImageEndpointTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Feature\Endpoints\API\StoreImageEndpointTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/Endpoints/API/StoreImageEndpointTest.php" scope="Class" />
+    <configuration name="DeleteImageEndpointTest.endpoint_returns_200" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Feature\Endpoints\API\DeleteImageEndpointTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/Endpoints/API/DeleteImageEndpointTest.php" method="endpoint_returns_200" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="StoreImageEndpointTest.calling_endpoint_with_proper_images_attributes_creates_images" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Feature\Endpoints\API\StoreImageEndpointTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/Endpoints/API/StoreImageEndpointTest.php" method="calling_endpoint_with_proper_images_attributes_creates_images" scope="Method" />
+    <configuration name="DeleteImageEndpointTest.it_deletes_image" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Feature\Endpoints\API\DeleteImageEndpointTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/Endpoints/API/DeleteImageEndpointTest.php" method="it_deletes_image" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="StoreImageEndpointTest.can_call_endpoint_to_attach_images_to_model" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Feature\Endpoints\API\StoreImageEndpointTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/Endpoints/API/StoreImageEndpointTest.php" method="can_call_endpoint_to_attach_images_to_model" scope="Method" />
+    <configuration name="DeleteImageEndpointTest.it_returns_success_false_if_delete_has_not_been_successful" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Feature\Endpoints\API\DeleteImageEndpointTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/Endpoints/API/DeleteImageEndpointTest.php" method="it_returns_success_false_if_delete_has_not_been_successful" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="StoreImageEndpointTest.can_call_endpoint_with_model" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Feature\Endpoints\API\StoreImageEndpointTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/Endpoints/API/StoreImageEndpointTest.php" method="can_call_endpoint_with_model" scope="Method" />
+    <configuration name="DeleteImageEndpointTest.it_returns_success_true_if_delete_has_been_successful" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Feature\Endpoints\API\DeleteImageEndpointTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/Endpoints/API/DeleteImageEndpointTest.php" method="it_returns_success_true_if_delete_has_been_successful" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -154,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.ImageTest.has_model_relationship" />
-        <item itemvalue="PHPUnit.StoreImageEndpointTest" />
-        <item itemvalue="PHPUnit.StoreImageEndpointTest.can_call_endpoint_to_attach_images_to_model" />
-        <item itemvalue="PHPUnit.StoreImageEndpointTest.calling_endpoint_with_proper_images_attributes_creates_images" />
-        <item itemvalue="PHPUnit.StoreImageEndpointTest.can_call_endpoint_with_model" />
+        <item itemvalue="PHPUnit.DeleteImageEndpointTest.endpoint_retunrs_404_for_not_existing_image" />
+        <item itemvalue="PHPUnit.DeleteImageEndpointTest.it_returns_success_false_if_delete_has_not_been_successful" />
+        <item itemvalue="PHPUnit.DeleteImageEndpointTest.it_returns_success_true_if_delete_has_been_successful" />
+        <item itemvalue="PHPUnit.DeleteImageEndpointTest.it_deletes_image" />
+        <item itemvalue="PHPUnit.DeleteImageEndpointTest.endpoint_returns_200" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +181,7 @@
       <workItem from="1585166686704" duration="6171000" />
       <workItem from="1585207804144" duration="88000" />
       <workItem from="1585251432217" duration="7423000" />
-      <workItem from="1585298413169" duration="28524000" />
+      <workItem from="1585298413169" duration="30792000" />
     </task>
     <servers />
   </component>
@@ -248,22 +250,22 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="99" y="57" width="1480" height="890" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1585255564587" />
-    <state width="1638" height="273" key="GridCell.Tab.0.bottom" timestamp="1585430295297">
+    <state width="1638" height="273" key="GridCell.Tab.0.bottom" timestamp="1585464984582">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585430295297" />
-    <state width="1638" height="273" key="GridCell.Tab.0.center" timestamp="1585430295295">
+    <state width="1638" height="273" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585464984582" />
+    <state width="1638" height="273" key="GridCell.Tab.0.center" timestamp="1585464984580">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585430295295" />
-    <state width="1638" height="273" key="GridCell.Tab.0.left" timestamp="1585430295294">
+    <state width="1638" height="273" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585464984580" />
+    <state width="1638" height="273" key="GridCell.Tab.0.left" timestamp="1585464984580">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585430295294" />
-    <state width="1638" height="273" key="GridCell.Tab.0.right" timestamp="1585430295296">
+    <state width="1638" height="273" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585464984580" />
+    <state width="1638" height="273" key="GridCell.Tab.0.right" timestamp="1585464984581">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585430295296" />
+    <state width="1638" height="273" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585464984581" />
     <state x="168" y="94" key="MergeDialog" timestamp="1585255709870">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -272,18 +274,18 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="547" y="239" key="MultipleFileMergeDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585255709920" />
-    <state x="615" y="332" key="NewPhpClassDialog" timestamp="1585427744157">
+    <state x="615" y="332" key="NewPhpClassDialog" timestamp="1585461035638">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="615" y="332" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585427744157" />
+    <state x="615" y="332" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585461035638" />
     <state x="658" y="451" key="NewPhpFileDialog" timestamp="1585427668599">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="658" y="451" key="NewPhpFileDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585427668599" />
-    <state x="289" y="152" key="SettingsEditor" timestamp="1585314496448">
+    <state x="289" y="152" key="SettingsEditor" timestamp="1585465013746">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="289" y="152" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1585314496448" />
+    <state x="289" y="152" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1585465013746" />
     <state x="540" y="290" key="Vcs.Multiple.Commit.Info.Dialog.Key" timestamp="1585255686384">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -316,9 +318,9 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="533" y="314" width="700" height="530" key="recent.locations.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585310743318" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1585426424091">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1585463919658">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585426424091" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585463919658" />
   </component>
 </project>

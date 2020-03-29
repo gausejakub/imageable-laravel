@@ -2,12 +2,21 @@
 
 namespace Gause\ImageableLaravel\Http\Controllers;
 
+use Gause\ImageableLaravel\Facades\Imageable;
+use Gause\ImageableLaravel\Models\Image;
 use Gause\ImageableLaravel\Requests\ImageableRequest;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 
 class ImagesController
 {
-    public function store(ImageableRequest $request)
+    /**
+     * Creates image or images
+     *
+     * @param ImageableRequest $request
+     * @return JsonResponse
+     */
+    public function store(ImageableRequest $request): JsonResponse
     {
         if ($request->hasImage()) {
             return $this->handleImageCreation($request);
@@ -19,6 +28,25 @@ class ImagesController
 
         return response()->json([
             'success' => false,
+        ]);
+    }
+
+    /**
+     * Deletes image
+     *
+     * @param Request $request
+     * @param Image $image
+     * @return JsonResponse
+     */
+    public function destroy(Request $request): JsonResponse
+    {
+        $imageId = $request->route('image');
+        $image = Image::findOrFail($imageId);
+
+        $result = Imageable::deleteImage($image);
+
+        return response()->json([
+            'success' => $result,
         ]);
     }
 
