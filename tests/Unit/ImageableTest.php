@@ -42,7 +42,6 @@ class ImageableTest extends LaravelTestCase
         ]);
     }
 
-
     /** @test */
     public function can_create_image_from_base64()
     {
@@ -52,7 +51,7 @@ class ImageableTest extends LaravelTestCase
 
         $imageFile = UploadedFile::fake()->image('avatar.jpg');
         $imgData = base64_encode(file_get_contents($imageFile));
-        $base64 = 'data:image/' . 'jpg' . ';base64,' . $imgData;
+        $base64 = 'data:image/'.'jpg'.';base64,'.$imgData;
 
         $this->imageable->createImage(
             $base64,
