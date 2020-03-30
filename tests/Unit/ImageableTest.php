@@ -42,10 +42,35 @@ class ImageableTest extends LaravelTestCase
         ]);
     }
 
+
+    /** @test */
+    public function can_create_image_from_base64()
+    {
+        $this->assertDatabaseMissing('images', [
+            'name' => 'NewName',
+        ]);
+
+        $imageFile = UploadedFile::fake()->image('avatar.jpg');
+        $imgData = base64_encode(file_get_contents($imageFile));
+        $base64 = 'data:image/' . 'jpg' . ';base64,' . $imgData;
+
+        $this->imageable->createImage(
+            $base64,
+            'NewName',
+            'Short description',
+            'Description'
+        );
+
+        $this->assertDatabaseHas('images', [
+            'name' => 'NewName',
+        ]);
+    }
+
     /** @test */
     public function image_position_is_automatically_assigned_if_model_is_provided()
     {
         $dummyModel = DummyModel::create();
+
         $image = $this->imageable->createImage(
             UploadedFile::fake()->image('avatar.jpg'),
             null,

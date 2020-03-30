@@ -20,8 +20,14 @@ class Imageable
 
         $fileName = uniqid();
 
-        $exploded = explode('.', $imageFile->getClientOriginalName());
-        $fileExtension = end($exploded);
+        if (is_string($imageFile)) {
+            $fileExtension = explode('/', mime_content_type($imageFile))[1];
+        } else {
+            $exploded = explode('.', $imageFile->getClientOriginalName());
+            $fileExtension = end($exploded);
+        }
+
+        $fileSize = $img->filesize();
 
         $filePath = $fileName.'.'.$fileExtension;
 
@@ -44,6 +50,7 @@ class Imageable
             'path' => $filePath,
             'fileName' => $fileName,
             'extension' => $fileExtension,
+            'fileSize' => $fileSize,
         ];
     }
 
@@ -77,8 +84,9 @@ class Imageable
      */
     public function createImage($imageFile, string $name = null, string $shortDescription = null, string $description = null, \Illuminate\Database\Eloquent\Model $model = null): \Gause\ImageableLaravel\Models\Image
     {
-        $fileSize = $imageFile->getSize();
-        $originalFileName = $imageFile->getClientOriginalName();
+        if (is_file($imageFile)) {
+            $originalFileName = $imageFile->getClientOriginalName();
+        }
 
         $savedImageDetails = $this->saveImage($imageFile);
 
@@ -88,8 +96,8 @@ class Imageable
             'description' => $description,
             'file_name' => $savedImageDetails['fileName'],
             'file_extension' => $savedImageDetails['extension'],
-            'file_size' => $fileSize,
-            'original_file_name' => $originalFileName,
+            'file_size' => $savedImageDetails['fileSize'],
+            'original_file_name' => isset($originalFileName) ? $originalFileName : null,
             'position' => $model ? $this->getNextPosition($model) : null,
             'model_id' => $model ? $model->id : null,
             'model_type' => $model ? get_class($model) : null,

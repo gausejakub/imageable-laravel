@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1449e9a2-b80a-456f-bb56-a030fa54ab45" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/create_images_table.php.stub" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/create_images_table.php.stub" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Imageable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Imageable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Requests/ImageableRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Requests/ImageableRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Unit/ImageableTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ImageableTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,17 +130,17 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.ImageableTest">
+  <component name="RunManager" selected="PHPUnit.ImageableTest.can_create_image_from_base64">
     <configuration name="ImageableTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Gause\ImageableLaravel\Tests\Unit\ImageableTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/ImageableTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="ImageableTest.can_get_next_image_position_for_model" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\ImageableTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/ImageableTest.php" method="can_get_next_image_position_for_model" scope="Method" />
+    <configuration name="ImageableTest.can_create_image" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\ImageableTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/ImageableTest.php" method="can_create_image" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ImageableTest.can_move_image_position_down_by_one" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\ImageableTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/ImageableTest.php" method="can_move_image_position_down_by_one" scope="Method" />
+    <configuration name="ImageableTest.can_create_image_from_base64" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\ImageableTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/ImageableTest.php" method="can_create_image_from_base64" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ImageableTest.image_position_is_automatically_assigned_if_model_is_provided" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -155,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.ImageableTest.can_create_image_from_base64" />
+        <item itemvalue="PHPUnit.ImageableTest.image_position_is_automatically_assigned_if_model_is_provided" />
+        <item itemvalue="PHPUnit.ImageableTest.can_create_image" />
         <item itemvalue="PHPUnit.ImageableTest" />
         <item itemvalue="PHPUnit.ImageableTest.trying_move_image_to_position_out_of_positions_range_moves_image_to_highest_possible_position" />
-        <item itemvalue="PHPUnit.ImageableTest.can_move_image_position_down_by_one" />
-        <item itemvalue="PHPUnit.ImageableTest.image_position_is_automatically_assigned_if_model_is_provided" />
-        <item itemvalue="PHPUnit.ImageableTest.can_get_next_image_position_for_model" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +182,8 @@
       <workItem from="1585166686704" duration="6171000" />
       <workItem from="1585207804144" duration="88000" />
       <workItem from="1585251432217" duration="7423000" />
-      <workItem from="1585298413169" duration="40920000" />
+      <workItem from="1585298413169" duration="41753000" />
+      <workItem from="1585595385682" duration="2619000" />
     </task>
     <servers />
   </component>
@@ -249,22 +252,22 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="99" y="57" width="1480" height="890" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1585255564587" />
-    <state width="1638" height="273" key="GridCell.Tab.0.bottom" timestamp="1585512861940">
+    <state width="1638" height="273" key="GridCell.Tab.0.bottom" timestamp="1585598114687">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585512861940" />
-    <state width="1638" height="273" key="GridCell.Tab.0.center" timestamp="1585512861938">
+    <state width="1638" height="273" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585598114687" />
+    <state width="1638" height="273" key="GridCell.Tab.0.center" timestamp="1585598114686">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585512861938" />
-    <state width="1638" height="273" key="GridCell.Tab.0.left" timestamp="1585512861937">
+    <state width="1638" height="273" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585598114686" />
+    <state width="1638" height="273" key="GridCell.Tab.0.left" timestamp="1585598114685">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585512861937" />
-    <state width="1638" height="273" key="GridCell.Tab.0.right" timestamp="1585512861939">
+    <state width="1638" height="273" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585598114685" />
+    <state width="1638" height="273" key="GridCell.Tab.0.right" timestamp="1585598114687">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585512861939" />
+    <state width="1638" height="273" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585598114687" />
     <state x="168" y="94" key="MergeDialog" timestamp="1585513030927">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -293,10 +296,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1585119906119" />
-    <state x="168" y="451" key="com.intellij.ide.util.TipDialog" timestamp="1585251453195">
+    <state x="168" y="451" key="com.intellij.ide.util.TipDialog" timestamp="1585595389379">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="168" y="451" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585251453195" />
+    <state x="168" y="451" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585595389379" />
     <state x="622" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585258628106">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -317,9 +320,9 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="533" y="314" width="700" height="530" key="recent.locations.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585310743318" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1585512276342">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1585598467609">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585512276342" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585598467609" />
   </component>
 </project>

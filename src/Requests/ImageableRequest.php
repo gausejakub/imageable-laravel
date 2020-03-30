@@ -74,7 +74,7 @@ class ImageableRequest extends FormRequest
             $prefix.'_name' => 'nullable|string|max:255',
             $prefix.'_short_description' => 'nullable|string|max:5000',
             $prefix.'_description' => 'nullable|string|max:5000',
-            $prefix => 'required|image',
+            $prefix => 'required', //TODO: validate image and image base64 format
         ]);
     }
 
@@ -91,7 +91,7 @@ class ImageableRequest extends FormRequest
             $prefix.'s.*.name' => 'nullable|string|max:255',
             $prefix.'s.*.short_description' => 'nullable|string|max:5000',
             $prefix.'s.*.description' => 'nullable|string|max:5000',
-            $prefix.'s.*.image' => 'required|image',
+            $prefix.'s.*.image' => 'required', //TODO: validate image and image base64 format
         ]);
     }
 
