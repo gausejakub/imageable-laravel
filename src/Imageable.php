@@ -134,7 +134,7 @@ class Imageable
     }
 
     /**
-     * Return next available position of model images
+     * Return next available position of model images.
      *
      * @param \Illuminate\Database\Eloquent\Model $model
      * @return int
@@ -145,7 +145,7 @@ class Imageable
     }
 
     /**
-     * Return currently highest position of model images
+     * Return currently highest position of model images.
      *
      * @param \Illuminate\Database\Eloquent\Model $model
      * @return int
@@ -156,7 +156,7 @@ class Imageable
     }
 
     /**
-     * Return count of model images
+     * Return count of model images.
      *
      * @param \Illuminate\Database\Eloquent\Model $model
      * @return int
@@ -169,7 +169,7 @@ class Imageable
     }
 
     /**
-     * Moves image to given position
+     * Moves image to given position.
      *
      * @param Image $image
      * @param int $position
@@ -207,14 +207,14 @@ class Imageable
         }
 
         $image->update([
-            'position' => $position
+            'position' => $position,
         ]);
 
         return $image->fresh();
     }
 
     /**
-     * Move Image one position up
+     * Move Image one position up.
      *
      * @param Image $image
      * @return Image
@@ -225,11 +225,12 @@ class Imageable
         if ($image->position == 1) { // TODO: test this
             return $image;
         }
+
         return $this->moveToPosition($image, $image->position - 1);
     }
 
     /**
-     * Move Image one position down
+     * Move Image one position down.
      *
      * @param Image $image
      * @return Image
@@ -250,7 +251,7 @@ class Imageable
     }
 
     /**
-     * Moves image to top position of its model scope
+     * Moves image to top position of its model scope.
      *
      * @param Image $image
      * @return Image
@@ -266,7 +267,7 @@ class Imageable
     }
 
     /**
-     * Moves image to bottom position of its model scope
+     * Moves image to bottom position of its model scope.
      *
      * @param Image $image
      * @return Image
