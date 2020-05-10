@@ -2,6 +2,9 @@
 
 namespace Gause\ImageableLaravel\Requests;
 
+use Gause\ImageableLaravel\Facades\Imageable;
+use Gause\ImageableLaravel\Models\Image;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ImageableRequest extends FormRequest
@@ -20,17 +23,17 @@ class ImageableRequest extends FormRequest
      * Creates and saves Images from Request.
      *
      * @param string $prefix
-     * @param \Illuminate\Database\Eloquent\Model|null $model
+     * @param Model|null $model
      * @return array
      */
-    public function createImages($prefix = 'image', \Illuminate\Database\Eloquent\Model $model = null): array
+    public function createImages($prefix = 'image', Model $model = null): array
     {
         $this->validateImages($prefix);
 
         $images = [];
 
         foreach ($this->{$prefix.'s'} as $image) {
-            $images[] = \Gause\ImageableLaravel\Facades\Imageable::createImage(
+            $images[] = Imageable::createImage(
                 $image[$prefix],
                 array_key_exists($prefix.'_name', $image) ? $image[$prefix.'_name'] : null,
                 array_key_exists($prefix.'_short_description', $image) ? $image[$prefix.'_short_description'] : null,
@@ -46,14 +49,14 @@ class ImageableRequest extends FormRequest
      * Creates and saves Image from Request.
      *
      * @param string $prefix
-     * @param \Illuminate\Database\Eloquent\Model\null $model
-     * @return \Gause\ImageableLaravel\\Models\Image
+     * @param Model $model
+     * @return Image
      */
-    public function createImage(string $prefix = 'image', \Illuminate\Database\Eloquent\Model $model = null): \Gause\ImageableLaravel\Models\Image
+    public function createImage(string $prefix = 'image', Model $model = null): Image
     {
         $this->validateImage($prefix);
 
-        return \Gause\ImageableLaravel\Facades\Imageable::createImage(
+        return Imageable::createImage(
             $this->{$prefix},
             $this->{$prefix.'_name'},
             $this->{$prefix.'_short_description'},
@@ -91,12 +94,12 @@ class ImageableRequest extends FormRequest
             $prefix.'s.*.name' => 'nullable|string|max:255',
             $prefix.'s.*.short_description' => 'nullable|string|max:5000',
             $prefix.'s.*.description' => 'nullable|string|max:5000',
-            $prefix.'s.*.image' => 'required', //TODO: validate image and image base64 format
+            $prefix.'s.*.file' => 'required', //TODO: validate image and image base64 format
         ]);
     }
 
     /**
-     * Determinates if request has image.
+     * Determinate if request has image.
      *
      * @param string $prefix
      * @return bool
@@ -107,7 +110,7 @@ class ImageableRequest extends FormRequest
     }
 
     /**
-     * Determinates if request has images.
+     * Determinate if request has images.
      *
      * @param string $prefix
      * @return bool

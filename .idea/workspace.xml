@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1449e9a2-b80a-456f-bb56-a030fa54ab45" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/create_images_table.php.stub" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/create_images_table.php.stub" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Imageable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Imageable.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Requests/ImageableRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Requests/ImageableRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ImageableTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ImageableTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +12,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -110,7 +105,6 @@
   <component name="ProjectId" id="1ZagcNn3e2L1Lo6EOgFWcJ6xnaT" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -183,25 +177,25 @@
       <workItem from="1585207804144" duration="88000" />
       <workItem from="1585251432217" duration="7423000" />
       <workItem from="1585298413169" duration="41753000" />
-      <workItem from="1585595385682" duration="2619000" />
+      <workItem from="1585595385682" duration="3560000" />
+      <workItem from="1589105659305" duration="194000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1585255999943">
@@ -252,22 +246,22 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="99" y="57" width="1480" height="890" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1585255564587" />
-    <state width="1638" height="273" key="GridCell.Tab.0.bottom" timestamp="1585598114687">
+    <state width="1638" height="273" key="GridCell.Tab.0.bottom" timestamp="1585635622311">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585598114687" />
-    <state width="1638" height="273" key="GridCell.Tab.0.center" timestamp="1585598114686">
+    <state width="1638" height="273" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585635622311" />
+    <state width="1638" height="273" key="GridCell.Tab.0.center" timestamp="1585635622310">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585598114686" />
-    <state width="1638" height="273" key="GridCell.Tab.0.left" timestamp="1585598114685">
+    <state width="1638" height="273" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585635622310" />
+    <state width="1638" height="273" key="GridCell.Tab.0.left" timestamp="1585635622310">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585598114685" />
-    <state width="1638" height="273" key="GridCell.Tab.0.right" timestamp="1585598114687">
+    <state width="1638" height="273" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585635622310" />
+    <state width="1638" height="273" key="GridCell.Tab.0.right" timestamp="1585635622310">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585598114687" />
+    <state width="1638" height="273" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585635622310" />
     <state x="168" y="94" key="MergeDialog" timestamp="1585513030927">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
