@@ -69,10 +69,10 @@ class StoreImageEndpointTest extends LaravelTestCase
         $this->post('/api/images', [
             'images' => [
                 0 => [
-                    'image' => $file,
+                    'file' => $file,
                 ],
                 1 => [
-                    'image' => $file2,
+                    'file' => $file2,
                 ],
             ],
         ]);
@@ -92,10 +92,10 @@ class StoreImageEndpointTest extends LaravelTestCase
         $this->post('/api/images', [
             'images' => [
                 0 => [
-                    'image' => $file,
+                    'file' => $file,
                 ],
                 1 => [
-                    'image' => $file2,
+                    'file' => $file2,
                 ],
             ],
             'model_type' => \Gause\ImageableLaravel\Tests\Helpers\DummyModel::class,

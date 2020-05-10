@@ -34,7 +34,7 @@ class ImageableRequest extends FormRequest
 
         foreach ($this->{$prefix.'s'} as $image) {
             $images[] = Imageable::createImage(
-                $image[$prefix],
+                $image['file'],
                 array_key_exists($prefix.'_name', $image) ? $image[$prefix.'_name'] : null,
                 array_key_exists($prefix.'_short_description', $image) ? $image[$prefix.'_short_description'] : null,
                 array_key_exists($prefix.'_description', $image) ? $image[$prefix.'_description'] : null,
