@@ -16,7 +16,7 @@ trait UsesImages
     }
 
     /**
-     * Deletes all model images
+     * Deletes all model images.
      *
      * @return void
      */
