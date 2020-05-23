@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Gause\ImageableLaravel\Listeners;
-
 
 use Gause\ImageableLaravel\Traits\UsesImages;
 use Illuminate\Database\Eloquent\Model;
