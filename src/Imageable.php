@@ -80,15 +80,22 @@ class Imageable
      * @param string|null $shortDescription
      * @param string|null $description
      * @param \Illuminate\Database\Eloquent\Model|null $model
+     * @param int|null $position
      * @return \Gause\ImageableLaravel\Models\Image
      */
-    public function createImage($imageFile, string $name = null, string $shortDescription = null, string $description = null, \Illuminate\Database\Eloquent\Model $model = null): \Gause\ImageableLaravel\Models\Image
+    public function createImage($imageFile, string $name = null, string $shortDescription = null, string $description = null, \Illuminate\Database\Eloquent\Model $model = null, int $position = null): \Gause\ImageableLaravel\Models\Image
     {
         if (is_file($imageFile)) {
             $originalFileName = $imageFile->getClientOriginalName();
         }
 
         $savedImageDetails = $this->saveImage($imageFile);
+
+        if ($model) {
+            $position = $position ? : $this->getNextPosition($model);
+        } else {
+            $position = null;
+        }
 
         $image = Image::create([
             'name' => $name,
@@ -98,7 +105,7 @@ class Imageable
             'file_extension' => $savedImageDetails['extension'],
             'file_size' => $savedImageDetails['fileSize'],
             'original_file_name' => isset($originalFileName) ? $originalFileName : null,
-            'position' => $model ? $this->getNextPosition($model) : null,
+            'position' => $position,
             'model_id' => $model ? $model->id : null,
             'model_type' => $model ? get_class($model) : null,
         ]);
