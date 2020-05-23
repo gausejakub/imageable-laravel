@@ -3,9 +3,13 @@
 namespace Gause\ImageableLaravel\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 class Image extends Model
 {
+    /**
+     * @var string[]
+     */
     protected $fillable = [
         'name',
         'description',
@@ -20,12 +24,15 @@ class Image extends Model
         'model_type',
     ];
 
+    /**
+     * @var string
+     */
     protected $table = 'images';
 
     /**
      * Defines relationship with model.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\MorphTo
+     * @return MorphTo
      */
     public function model()
     {

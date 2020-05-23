@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1449e9a2-b80a-456f-bb56-a030fa54ab45" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Listeners/DeleteModelImages.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/Listeners/DeleteModelImagesTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Requests/ImageableRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Requests/ImageableRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Traits/UsesRequestCreateImages.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traits/UsesRequestCreateImages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Traits/UsesRequestImages.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traits/UsesRequestImages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Traits/UsesRequestSyncImages.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traits/UsesRequestSyncImages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Image.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Traits/UsesImages.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traits/UsesImages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/Traits/HasImagesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Traits/HasImagesTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,25 +134,25 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.UsesRequestSyncImagesTest">
-    <configuration name="StoreImageEndpointTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Feature\Endpoints\API\StoreImageEndpointTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/Endpoints/API/StoreImageEndpointTest.php" scope="Class" />
+  <component name="RunManager" selected="PHPUnit.DeleteModelImagesTest.model_images_are_deleted">
+    <configuration name="DeleteModelImagesTest.delete_images_is_called_on_model" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Listeners\DeleteModelImagesTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Listeners/DeleteModelImagesTest.php" method="delete_images_is_called_on_model" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DeleteModelImagesTest.model_images_are_deleted" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Listeners\DeleteModelImagesTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Listeners/DeleteModelImagesTest.php" method="model_images_are_deleted" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="HasImagesTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Traits\HasImagesTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Traits/HasImagesTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="HasImagesTest.allows_to_delete_all_images" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Traits\HasImagesTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Traits/HasImagesTest.php" method="allows_to_delete_all_images" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="UsesRequestSyncImagesTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Traits\UsesRequestSyncImagesTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Traits/UsesRequestSyncImagesTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="UsesRequestSyncImagesTest.can_add_new_image" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Traits\UsesRequestSyncImagesTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Traits/UsesRequestSyncImagesTest.php" method="can_add_new_image" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="UsesRequestSyncImagesTest.can_delete_old_image" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Traits\UsesRequestSyncImagesTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Traits/UsesRequestSyncImagesTest.php" method="can_delete_old_image" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="UsesRequestSyncImagesTest.can_update_positions" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Traits\UsesRequestSyncImagesTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Traits/UsesRequestSyncImagesTest.php" method="can_update_positions" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -160,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.DeleteModelImagesTest.model_images_are_deleted" />
+        <item itemvalue="PHPUnit.DeleteModelImagesTest.delete_images_is_called_on_model" />
+        <item itemvalue="PHPUnit.HasImagesTest.allows_to_delete_all_images" />
+        <item itemvalue="PHPUnit.HasImagesTest" />
         <item itemvalue="PHPUnit.UsesRequestSyncImagesTest" />
-        <item itemvalue="PHPUnit.UsesRequestSyncImagesTest.can_add_new_image" />
-        <item itemvalue="PHPUnit.UsesRequestSyncImagesTest.can_delete_old_image" />
-        <item itemvalue="PHPUnit.UsesRequestSyncImagesTest.can_update_positions" />
-        <item itemvalue="PHPUnit.StoreImageEndpointTest" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +189,7 @@
       <workItem from="1585298413169" duration="41753000" />
       <workItem from="1585595385682" duration="3560000" />
       <workItem from="1589105659305" duration="1997000" />
-      <workItem from="1590222641359" duration="8831000" />
+      <workItem from="1590222641359" duration="11527000" />
     </task>
     <servers />
   </component>
@@ -242,19 +243,19 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="528" y="260" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585313161124" />
-    <state x="200" y="214" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1590249001961">
+    <state x="200" y="214" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1590258951594">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="200" y="214" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.2560.1417@0.23.2560.1417" timestamp="1590249001961" />
+    <state x="200" y="214" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.2560.1417@0.23.2560.1417" timestamp="1590258951594" />
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585166744278">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585166744278" />
-    <state x="881" y="410" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1590249778459">
+    <state x="881" y="410" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1590259574320">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585427370439" />
-    <state x="881" y="410" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.2560.1417@0.23.2560.1417" timestamp="1590249778459" />
+    <state x="881" y="410" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.2560.1417@0.23.2560.1417" timestamp="1590259574320" />
     <state x="421" y="40" key="CommitChangelistDialog2" timestamp="1585474608065">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -267,26 +268,26 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="99" y="57" width="1480" height="890" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1585255564587" />
-    <state width="1238" height="399" key="GridCell.Tab.0.bottom" timestamp="1590254239759">
+    <state width="1238" height="399" key="GridCell.Tab.0.bottom" timestamp="1590259420534">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state width="1638" height="273" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585635622311" />
-    <state width="1238" height="399" key="GridCell.Tab.0.bottom/0.23.2560.1417@0.23.2560.1417" timestamp="1590254239759" />
-    <state width="1238" height="399" key="GridCell.Tab.0.center" timestamp="1590254239759">
+    <state width="1238" height="399" key="GridCell.Tab.0.bottom/0.23.2560.1417@0.23.2560.1417" timestamp="1590259420534" />
+    <state width="1238" height="399" key="GridCell.Tab.0.center" timestamp="1590259420533">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state width="1638" height="273" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585635622310" />
-    <state width="1238" height="399" key="GridCell.Tab.0.center/0.23.2560.1417@0.23.2560.1417" timestamp="1590254239759" />
-    <state width="1238" height="399" key="GridCell.Tab.0.left" timestamp="1590254239757">
+    <state width="1238" height="399" key="GridCell.Tab.0.center/0.23.2560.1417@0.23.2560.1417" timestamp="1590259420533" />
+    <state width="1238" height="399" key="GridCell.Tab.0.left" timestamp="1590259420532">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state width="1638" height="273" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585635622310" />
-    <state width="1238" height="399" key="GridCell.Tab.0.left/0.23.2560.1417@0.23.2560.1417" timestamp="1590254239757" />
-    <state width="1238" height="399" key="GridCell.Tab.0.right" timestamp="1590254239759">
+    <state width="1238" height="399" key="GridCell.Tab.0.left/0.23.2560.1417@0.23.2560.1417" timestamp="1590259420532" />
+    <state width="1238" height="399" key="GridCell.Tab.0.right" timestamp="1590259420533">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state width="1638" height="273" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585635622310" />
-    <state width="1238" height="399" key="GridCell.Tab.0.right/0.23.2560.1417@0.23.2560.1417" timestamp="1590254239759" />
+    <state width="1238" height="399" key="GridCell.Tab.0.right/0.23.2560.1417@0.23.2560.1417" timestamp="1590259420533" />
     <state x="168" y="94" key="MergeDialog" timestamp="1585513030927">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -295,11 +296,11 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="547" y="239" key="MultipleFileMergeDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585513030970" />
-    <state x="937" y="471" key="NewPhpClassDialog" timestamp="1590249257883">
+    <state x="937" y="471" key="NewPhpClassDialog" timestamp="1590258938149">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="615" y="332" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585473828340" />
-    <state x="937" y="471" key="NewPhpClassDialog/0.23.2560.1417@0.23.2560.1417" timestamp="1590249257883" />
+    <state x="937" y="471" key="NewPhpClassDialog/0.23.2560.1417@0.23.2560.1417" timestamp="1590258938149" />
     <state x="1003" y="632" key="NewPhpFileDialog" timestamp="1590249449664">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
@@ -352,7 +353,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/tests/Unit/Traits/UsesRequestSyncImagesTest.php</url>
-          <line>74</line>
+          <line>72</line>
           <properties>
             <option name="className" value="\Gause\ImageableLaravel\Tests\Unit\Traits\UsesRequestSyncImagesTest" />
             <option name="methodName" value="can_add_new_image" />
