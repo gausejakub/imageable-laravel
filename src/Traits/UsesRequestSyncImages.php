@@ -24,26 +24,28 @@ trait UsesRequestSyncImages
             $missingImages = $model->images->pluck('id')->toArray();
         }
 
-        foreach ($this->{$prefix.'s'} as $key => $image) {
-            if (array_key_exists('id', $image) && $image['id'] !== null) {
-                if ($model) {
-                    unset($missingImages[array_search($image['id'], $missingImages)]);
+        if (is_array($this->{$prefix.'s'})) {
+            foreach ($this->{$prefix.'s'} as $key => $image) {
+                if (array_key_exists('id', $image) && $image['id'] !== null) {
+                    if ($model) {
+                        unset($missingImages[array_search($image['id'], $missingImages)]);
 
-                    $image = $model->images()->find($image['id']);
+                        $image = $model->images()->find($image['id']);
 
-                    if ($image && $key + 1 !== $image->position) {
-                        $image->update(['position' => $key + 1]);
+                        if ($image && $key + 1 !== $image->position) {
+                            $image->update(['position' => $key + 1]);
+                        }
                     }
+                } else {
+                    $images[] = Imageable::createImage(
+                        $image['file'],
+                        array_key_exists('name', $image) ? $image['name'] : null,
+                        array_key_exists('short_description', $image) ? $image['short_description'] : null,
+                        array_key_exists('description', $image) ? $image['description'] : null,
+                        $model,
+                        $key + 1
+                    );
                 }
-            } else {
-                $images[] = Imageable::createImage(
-                    $image['file'],
-                    array_key_exists('name', $image) ? $image['name'] : null,
-                    array_key_exists('short_description', $image) ? $image['short_description'] : null,
-                    array_key_exists('description', $image) ? $image['description'] : null,
-                    $model,
-                    $key + 1
-                );
             }
         }
 
@@ -68,7 +70,7 @@ trait UsesRequestSyncImages
     private function validateSyncingImages($prefix = 'image'): void
     {
         $this->validate([
-            $prefix.'s' => 'required|array',
+            $prefix.'s' => 'nullable|array',
             $prefix.'s.*.name' => 'nullable|string|max:255',
             $prefix.'s.*.short_description' => 'nullable|string|max:5000',
             $prefix.'s.*.description' => 'nullable|string|max:5000',

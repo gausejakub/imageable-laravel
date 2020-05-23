@@ -173,4 +173,40 @@ class UsesRequestSyncImagesTest extends LaravelTestCase
             'position' => 1,
         ]);
     }
+
+    /** @test */
+    public function can_delete_all_images()
+    {
+        $image = Image::create([
+            'name' => 'Testing name',
+            'short_description' => 'Short testing description',
+            'description' => 'Testing description',
+            'file_name' => 'xxxxaaakkjjkda',
+            'file_extension' => 'jpg',
+            'file_size' => 0,
+            'original_file_name' => null,
+            'position' => 2,
+            'model_id' => $this->model->id,
+            'model_type' => DummyModel::class,
+            'created_by' => null,
+        ]);
+
+        $this->assertDatabaseHas('images', [
+            'id' => $this->image->id,
+        ]);
+        $this->assertDatabaseHas('images', [
+            'id' => $image->id,
+        ]);
+
+        $request = new ImageableRequest();
+
+        $request->syncImages('image', $this->model);
+
+        $this->assertDatabaseMissing('images', [
+            'id' => $this->image->id,
+        ]);
+        $this->assertDatabaseMissing('images', [
+            'id' => $image->id,
+        ]);
+    }
 }
