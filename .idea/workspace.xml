@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1449e9a2-b80a-456f-bb56-a030fa54ab45" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Traits/UsesRequestCreateImages.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Traits/UsesRequestImages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Requests/ImageableRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Requests/ImageableRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Endpoints/API/StoreImageEndpointTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Endpoints/API/StoreImageEndpointTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Requests/ImageableRequest.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +111,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -179,7 +181,8 @@
       <workItem from="1585251432217" duration="7423000" />
       <workItem from="1585298413169" duration="41753000" />
       <workItem from="1585595385682" duration="3560000" />
-      <workItem from="1589105659305" duration="516000" />
+      <workItem from="1589105659305" duration="1997000" />
+      <workItem from="1590222641359" duration="1109000" />
     </task>
     <servers />
   </component>
@@ -231,10 +234,11 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585166744278" />
-    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1585427370439">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="881" y="410" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1590224280795">
+      <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585427370439" />
+    <state x="881" y="410" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.2560.1417@0.23.2560.1417" timestamp="1590224280795" />
     <state x="421" y="40" key="CommitChangelistDialog2" timestamp="1585474608065">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -247,26 +251,26 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="99" y="57" width="1480" height="890" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1585255564587" />
-    <state width="1238" height="399" key="GridCell.Tab.0.bottom" timestamp="1589106135156">
+    <state width="1238" height="399" key="GridCell.Tab.0.bottom" timestamp="1589120089850">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state width="1638" height="273" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585635622311" />
-    <state width="1238" height="399" key="GridCell.Tab.0.bottom/0.23.2560.1417@0.23.2560.1417" timestamp="1589106135156" />
-    <state width="1238" height="399" key="GridCell.Tab.0.center" timestamp="1589106135155">
+    <state width="1238" height="399" key="GridCell.Tab.0.bottom/0.23.2560.1417@0.23.2560.1417" timestamp="1589120089850" />
+    <state width="1238" height="399" key="GridCell.Tab.0.center" timestamp="1589120089849">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state width="1638" height="273" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585635622310" />
-    <state width="1238" height="399" key="GridCell.Tab.0.center/0.23.2560.1417@0.23.2560.1417" timestamp="1589106135155" />
-    <state width="1238" height="399" key="GridCell.Tab.0.left" timestamp="1589106135155">
+    <state width="1238" height="399" key="GridCell.Tab.0.center/0.23.2560.1417@0.23.2560.1417" timestamp="1589120089849" />
+    <state width="1238" height="399" key="GridCell.Tab.0.left" timestamp="1589120089849">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state width="1638" height="273" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585635622310" />
-    <state width="1238" height="399" key="GridCell.Tab.0.left/0.23.2560.1417@0.23.2560.1417" timestamp="1589106135154" />
-    <state width="1238" height="399" key="GridCell.Tab.0.right" timestamp="1589106135155">
+    <state width="1238" height="399" key="GridCell.Tab.0.left/0.23.2560.1417@0.23.2560.1417" timestamp="1589120089849" />
+    <state width="1238" height="399" key="GridCell.Tab.0.right" timestamp="1589120089849">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state width="1638" height="273" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585635622310" />
-    <state width="1238" height="399" key="GridCell.Tab.0.right/0.23.2560.1417@0.23.2560.1417" timestamp="1589106135155" />
+    <state width="1238" height="399" key="GridCell.Tab.0.right/0.23.2560.1417@0.23.2560.1417" timestamp="1589120089849" />
     <state x="168" y="94" key="MergeDialog" timestamp="1585513030927">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -275,14 +279,16 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="547" y="239" key="MultipleFileMergeDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585513030970" />
-    <state x="615" y="332" key="NewPhpClassDialog" timestamp="1585473828340">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="937" y="471" key="NewPhpClassDialog" timestamp="1590224296607">
+      <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="615" y="332" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585473828340" />
-    <state x="658" y="451" key="NewPhpFileDialog" timestamp="1585427668599">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="937" y="471" key="NewPhpClassDialog/0.23.2560.1417@0.23.2560.1417" timestamp="1590224296607" />
+    <state x="1003" y="632" key="NewPhpFileDialog" timestamp="1590224231065">
+      <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="658" y="451" key="NewPhpFileDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585427668599" />
+    <state x="1003" y="632" key="NewPhpFileDialog/0.23.2560.1417@0.23.2560.1417" timestamp="1590224231065" />
     <state x="289" y="152" key="SettingsEditor" timestamp="1585511420911">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
