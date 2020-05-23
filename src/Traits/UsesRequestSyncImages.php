@@ -74,8 +74,8 @@ trait UsesRequestSyncImages
             $prefix.'s.*.name' => 'nullable|string|max:255',
             $prefix.'s.*.short_description' => 'nullable|string|max:5000',
             $prefix.'s.*.description' => 'nullable|string|max:5000',
-            $prefix.'s.*.file' => 'required_without:' . $prefix . 's.*.id|nullable', //TODO: validate image and image base64 format
-            $prefix.'s.*.id' => 'required_without:' . $prefix . 's.*.file|nullable|int|exists:images,id', //TODO: validate image and image base64 format
+            $prefix.'s.*.file' => 'required_without:'.$prefix.'s.*.id|nullable', //TODO: validate image and image base64 format
+            $prefix.'s.*.id' => 'required_without:'.$prefix.'s.*.file|nullable|int|exists:images,id', //TODO: validate image and image base64 format
         ]);
     }
 }
