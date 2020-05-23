@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Gause\ImageableLaravel\Traits;
-
 
 trait UsesRequestImages
 {
