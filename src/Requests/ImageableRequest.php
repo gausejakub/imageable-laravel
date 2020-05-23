@@ -2,14 +2,12 @@
 
 namespace Gause\ImageableLaravel\Requests;
 
-use Gause\ImageableLaravel\Traits\UsesRequestCreateImages;
-use Gause\ImageableLaravel\Traits\UsesRequestSyncImages;
+use Gause\ImageableLaravel\Traits\UsesRequestImages;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ImageableRequest extends FormRequest
 {
-    use UsesRequestCreateImages;
-    use UsesRequestSyncImages;
+    use UsesRequestImages;
 
     public function authorize()
     {

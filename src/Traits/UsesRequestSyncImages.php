@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 trait UsesRequestSyncImages
 {
-    use UsesRequestImages;
-
     /**
      * Creates and saves Images from Request.
      *
