@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Gause\ImageableLaravel\Tests\Unit\Listeners;
-
 
 use Gause\ImageableLaravel\Listeners\DeleteModelImages;
 use Gause\ImageableLaravel\Models\Image;
