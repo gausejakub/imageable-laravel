@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Gause\ImageableLaravel\Tests\Unit\Traits;
-
 
 use Gause\ImageableLaravel\Models\Image;
 use Gause\ImageableLaravel\Requests\ImageableRequest;
@@ -67,7 +65,7 @@ class UsesRequestSyncImagesTest extends LaravelTestCase
                 1 => [
                     'id' => $this->image->id,
                 ],
-            ]
+            ],
         ], $overrides);
     }
 
@@ -95,7 +93,7 @@ class UsesRequestSyncImagesTest extends LaravelTestCase
                     'description' => 'Description',
                     'file' => UploadedFile::fake()->image('avatar.jpg'),
                 ],
-            ]
+            ],
         ]);
 
         $request->syncImages('image', $this->model);
@@ -125,7 +123,7 @@ class UsesRequestSyncImagesTest extends LaravelTestCase
                     'description' => 'Description',
                     'file' => UploadedFile::fake()->image('avatar.jpg'),
                 ],
-            ]
+            ],
         ]);
 
         $request->syncImages('image', $this->model);
@@ -161,7 +159,7 @@ class UsesRequestSyncImagesTest extends LaravelTestCase
                 1 => [
                     'id' => $this->image->id,
                 ],
-            ]
+            ],
         ]);
 
         $request->syncImages('image', $this->model);

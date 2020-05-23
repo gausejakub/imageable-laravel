@@ -92,7 +92,7 @@ class Imageable
         $savedImageDetails = $this->saveImage($imageFile);
 
         if ($model) {
-            $position = $position ? : $this->getNextPosition($model);
+            $position = $position ?: $this->getNextPosition($model);
         } else {
             $position = null;
         }
