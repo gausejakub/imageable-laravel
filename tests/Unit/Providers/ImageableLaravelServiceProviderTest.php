@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Gause\ImageableLaravel\Tests\Unit\Providers;
-
 
 use Gause\ImageableLaravel\Tests\LaravelTestCase;
 
