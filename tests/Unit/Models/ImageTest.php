@@ -44,15 +44,26 @@ class ImageTest extends LaravelTestCase
             'original_file_name' => 'OriginalName',
         ]);
 
-        $this->assertEquals('some_name.jpg', $image->path);
+        $this->assertEquals('public/some_name.jpg', $image->path);
+    }
+
+    /** @test */
+    public function can_get_thumbnail_path()
+    {
+        $image = Image::create([
+            'name' => 'MyNewImage',
+            'file_name' => 'some_name',
+            'file_extension' => 'jpg',
+            'file_size' => 69,
+            'original_file_name' => 'OriginalName',
+        ]);
+
+        $this->assertEquals('public/some_name_thumbnail.jpg', $image->thumbPath);
     }
 
     /** @test */
     public function can_get_image_file_url()
     {
-        Storage::shouldReceive('url')
-            ->andReturn('example.com/some_name.jpg');
-
         $image = Image::create([
             'name' => 'MyNewImage',
             'file_name' => 'some_name',
@@ -61,15 +72,38 @@ class ImageTest extends LaravelTestCase
             'original_file_name' => 'OriginalName',
         ]);
 
-        $this->assertEquals('example.com/some_name.jpg', $image->url);
+
+        Storage::shouldReceive('url')
+            ->with($image->path)
+            ->andReturn('test')
+            ->once();
+
+        $image->url;
+    }
+
+    /** @test */
+    public function can_get_image_thumb_file_url()
+    {
+        $image = Image::create([
+            'name' => 'MyNewImage',
+            'file_name' => 'some_name',
+            'file_extension' => 'jpg',
+            'file_size' => 69,
+            'original_file_name' => 'OriginalName',
+        ]);
+
+
+        Storage::shouldReceive('url')
+            ->with($image->thumbPath)
+            ->andReturn('test')
+            ->once();
+
+        $image->thumbUrl;
     }
 
     /** @test */
     public function can_get_image_file_temp_url()
     {
-        Storage::shouldReceive('temporaryUrl')
-            ->andReturn('example.com/some_name.jpg');
-
         $image = Image::create([
             'name' => 'MyNewImage',
             'file_name' => 'some_name',
@@ -78,7 +112,33 @@ class ImageTest extends LaravelTestCase
             'original_file_name' => 'OriginalName',
         ]);
 
-        $this->assertEquals('example.com/some_name.jpg', $image->temporaryUrl);
+
+        Storage::shouldReceive('temporaryUrl')
+            ->with($image->path)
+            ->andReturn('test')
+            ->once();
+
+        $image->temporaryUrl;
+    }
+
+    /** @test */
+    public function can_get_image_file_thumb_temp_url()
+    {
+        $image = Image::create([
+            'name' => 'MyNewImage',
+            'file_name' => 'some_name',
+            'file_extension' => 'jpg',
+            'file_size' => 69,
+            'original_file_name' => 'OriginalName',
+        ]);
+
+
+        Storage::shouldReceive('temporaryUrl')
+            ->with($image->thumbPath)
+            ->andReturn('test')
+            ->once();
+
+        $image->temporaryThumbUrl;
     }
 
     /** @test */

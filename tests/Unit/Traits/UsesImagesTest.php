@@ -84,13 +84,13 @@ class UsesImagesTest extends LaravelTestCase
                     'id' => $image->id,
                     'name' => $image->name,
                     'url' => $image->url,
-                    'thumb_url' => $image->url,
+                    'thumb_url' => $image->thumbUrl,
                 ],
                 1 => [
                     'id' => $image2->id,
                     'name' => $image2->name,
                     'url' => $image2->url,
-                    'thumb_url' => $image2->url,
+                    'thumb_url' => $image2->thumbUrl,
                 ],
             ],
             $publicImages

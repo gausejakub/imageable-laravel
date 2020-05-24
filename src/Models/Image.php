@@ -57,7 +57,17 @@ class Image extends Model
      */
     public function getPathAttribute(): string
     {
-        return $this->file_name.'.'.$this->file_extension;
+        return 'public/'.$this->file_name.'.'.$this->file_extension;
+    }
+
+    /**
+     * Returns path to thumb image in storage.
+     *
+     * @return string
+     */
+    public function getThumbPathAttribute(): string
+    {
+        return 'public/'.$this->file_name.'_thumbnail.'.$this->file_extension;
     }
 
     /**
@@ -71,6 +81,16 @@ class Image extends Model
     }
 
     /**
+     * Returns url to thumbnail image file.
+     *
+     * @return string
+     */
+    public function getThumbUrlAttribute(): string
+    {
+        return \Illuminate\Support\Facades\Storage::url($this->thumbPath);
+    }
+
+    /**
      * Returns temporary url to image file.
      *
      * @return string
@@ -78,6 +98,16 @@ class Image extends Model
     public function getTemporaryUrlAttribute(): string
     {
         return \Illuminate\Support\Facades\Storage::temporaryUrl($this->path);
+    }
+
+    /**
+     * Returns temporary url to image file.
+     *
+     * @return string
+     */
+    public function getTemporaryThumbUrlAttribute(): string
+    {
+        return \Illuminate\Support\Facades\Storage::temporaryUrl($this->thumbPath);
     }
 
     /**

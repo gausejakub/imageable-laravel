@@ -39,7 +39,7 @@ trait UsesImages
                 'id' => $image->id,
                 'name' => $image->name,
                 'url' => $image->url,
-                'thumb_url' => $image->url,
+                'thumb_url' => $image->thumbUrl,
             ];
         }
 
