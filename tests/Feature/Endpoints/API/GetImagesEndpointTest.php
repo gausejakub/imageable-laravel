@@ -13,7 +13,7 @@ class GetImagesEndpointTest extends LaravelTestCase
     {
         $model = DummyModel::create();
 
-        $response = $this->get('/api/images?model_id=' . $model->id . '&model_type=' . DummyModel::class);
+        $response = $this->get('/api/images?model_id='.$model->id.'&model_type='.DummyModel::class);
 
         $response->assertStatus(200);
     }
@@ -32,7 +32,7 @@ class GetImagesEndpointTest extends LaravelTestCase
             'model_type' => DummyModel::class,
         ]);
 
-        $response = $this->get('/api/images?model_id=' . $model->id . '&model_type=' . DummyModel::class);
+        $response = $this->get('/api/images?model_id='.$model->id.'&model_type='.DummyModel::class);
 
         $data = json_decode($response->getContent(), true)['data'];
         $this->assertEquals(
