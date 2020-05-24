@@ -26,7 +26,7 @@ trait UsesImages
     }
 
     /**
-     * Sets attribute to model that represents public images array
+     * Sets attribute to model that represents public images array.
      *
      * @return array
      */
