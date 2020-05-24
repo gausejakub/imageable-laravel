@@ -127,7 +127,7 @@ class Imageable
         if ($image->model) { // Move all related Images above down by one
             $relatedImagesAbove = Image::where('model_id', $image->model_id)
                 ->where('model_type', $image->model_type)
-                ->where('position', '>', $image->position)
+                ->where('position', '>', (int)$image->position)
                 ->get();
 
             foreach ($relatedImagesAbove as $relatedImage) {

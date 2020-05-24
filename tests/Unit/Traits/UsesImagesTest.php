@@ -2,6 +2,7 @@
 
 namespace Gause\ImageableLaravel\Tests\Unit\Traits;
 
+use Gause\ImageableLaravel\Facades\Imageable;
 use Gause\ImageableLaravel\Models\Image;
 use Gause\ImageableLaravel\Tests\Helpers\DummyModel;
 use Gause\ImageableLaravel\Tests\LaravelTestCase;
@@ -49,6 +50,37 @@ class UsesImagesTest extends LaravelTestCase
 
         $this->assertDatabaseMissing('images', ['id' => $image->id]);
         $this->assertDatabaseMissing('images', ['id' => $image2->id]);
+    }
+
+    /** @test */
+    public function delete_all_images_uses_imageable_delete_image_method()
+    {
+        $model = DummyModel::create();
+
+        $image = Image::create([
+            'name' => 'MyNewImage',
+            'file_name' => 'some_name',
+            'file_extension' => 'jpg',
+            'file_size' => 69,
+            'original_file_name' => 'OriginalName',
+            'model_id' => $model->id,
+            'model_type' => DummyModel::class,
+        ]);
+
+        $image2 = Image::create([
+            'name' => 'MyNewImage',
+            'file_name' => 'some_name',
+            'file_extension' => 'jpg',
+            'file_size' => 69,
+            'original_file_name' => 'OriginalName',
+            'model_id' => $model->id,
+            'model_type' => DummyModel::class,
+        ]);
+
+        Imageable::shouldReceive('deleteImage')
+            ->twice();
+
+        $model->deleteImages();
     }
 
     /** @test */

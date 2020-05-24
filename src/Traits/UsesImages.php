@@ -22,7 +22,9 @@ trait UsesImages
      */
     public function deleteImages(): void
     {
-        $this->images()->delete();
+        foreach ($this->images as $image) {
+            $image->delete();
+        }
     }
 
     /**
