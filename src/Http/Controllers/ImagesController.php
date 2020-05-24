@@ -13,6 +13,40 @@ class ImagesController
     /**
      * Creates image or images.
      *
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function index(Request $request): JsonResponse
+    {
+        $request->validate( [
+            'model_id' => 'required|int',
+            'model_type' => 'required|string',
+        ]);
+
+        $images = Image::where('model_type', $request->model_type)
+            ->where('model_id', $request->model_id)
+            ->get();
+
+        $publicImages = [];
+
+        foreach ($images as $image) {
+            $publicImages[] = [
+                'id' => $image->id,
+                'name' => $image->name,
+                'url' => $image->url,
+                'thumb_url' => $image->thumbUrl,
+            ];
+        }
+
+        return response()->json([
+            'success' => true,
+            'data' => $publicImages,
+        ]);
+    }
+
+    /**
+     * Creates image or images.
+     *
      * @param ImageableRequest $request
      * @return JsonResponse
      */
