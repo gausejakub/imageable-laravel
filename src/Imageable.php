@@ -2,7 +2,6 @@
 
 namespace Gause\ImageableLaravel;
 
-use Gause\ImageableLaravel\Events\ImageCreated;
 use Gause\ImageableLaravel\Models\Image;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;

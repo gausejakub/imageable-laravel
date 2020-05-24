@@ -2,7 +2,6 @@
 
 namespace Gause\ImageableLaravel;
 
-use Gause\ImageableLaravel\Listeners\DeleteImageFile;
 use Illuminate\Support\ServiceProvider;
 
 class ImageableLaravelServiceProvider extends ServiceProvider
