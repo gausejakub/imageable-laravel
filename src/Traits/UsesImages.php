@@ -24,4 +24,25 @@ trait UsesImages
     {
         $this->images()->delete();
     }
+
+    /**
+     * Sets attribute to model that represents public images array
+     *
+     * @return array
+     */
+    public function getPublicImagesAttribute(): array
+    {
+        $images = [];
+
+        foreach ($this->images as $image) {
+            $images[] = [
+                'id' => $image->id,
+                'name' => $image->name,
+                'url' => $image->url,
+                'thumb_url' => $image->url,
+            ];
+        }
+
+        return $images;
+    }
 }
