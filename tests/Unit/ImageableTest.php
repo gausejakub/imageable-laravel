@@ -128,7 +128,7 @@ class ImageableTest extends LaravelTestCase
             UploadedFile::fake()->image('avatar.jpg', 1920, 1024)
         );
 
-        Storage::assertExists('public/' . $savedImageData['fileName'].'_thumbnail.'.$savedImageData['extension']);
+        Storage::assertExists('public/'.$savedImageData['fileName'].'_thumbnail.'.$savedImageData['extension']);
     }
 
     /** @test */
