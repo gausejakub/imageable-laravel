@@ -29,7 +29,7 @@ class Imageable
 
         $fileSize = $img->filesize();
 
-        $filePath = $fileName.'.'.$fileExtension;
+        $filePath = 'public/' . $fileName.'.'.$fileExtension;
 
         $result = Storage::put(
             $filePath,
@@ -122,7 +122,7 @@ class Imageable
      */
     public function deleteImage(Image $image): bool
     {
-        $this->deleteImageFromStorage($image->path);
+        $this->deleteImageFromStorage('public/' . $image->path);
 
         if ($image->model) { // Move all related Images above down by one
             $relatedImagesAbove = Image::where('model_id', $image->model_id)
