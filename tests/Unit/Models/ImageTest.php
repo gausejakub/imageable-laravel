@@ -72,7 +72,6 @@ class ImageTest extends LaravelTestCase
             'original_file_name' => 'OriginalName',
         ]);
 
-
         Storage::shouldReceive('url')
             ->with($image->path)
             ->andReturn('test')
@@ -91,7 +90,6 @@ class ImageTest extends LaravelTestCase
             'file_size' => 69,
             'original_file_name' => 'OriginalName',
         ]);
-
 
         Storage::shouldReceive('url')
             ->with($image->thumbPath)
@@ -112,7 +110,6 @@ class ImageTest extends LaravelTestCase
             'original_file_name' => 'OriginalName',
         ]);
 
-
         Storage::shouldReceive('temporaryUrl')
             ->with($image->path)
             ->andReturn('test')
@@ -131,7 +128,6 @@ class ImageTest extends LaravelTestCase
             'file_size' => 69,
             'original_file_name' => 'OriginalName',
         ]);
-
 
         Storage::shouldReceive('temporaryUrl')
             ->with($image->thumbPath)
