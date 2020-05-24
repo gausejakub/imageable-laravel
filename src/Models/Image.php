@@ -81,7 +81,7 @@ class Image extends Model
     }
 
     /**
-     * Delete Image
+     * Delete Image.
      * @return bool|null
      * @throws \Exception
      */
@@ -90,6 +90,7 @@ class Image extends Model
         if ($deleteWithFile === true) {
             return Imageable::deleteImage($this);
         }
+
         return parent::delete();
     }
 }
