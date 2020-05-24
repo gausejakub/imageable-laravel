@@ -123,9 +123,12 @@ class ImageableTest extends LaravelTestCase
     public function saving_image_can_create_thumbnail()
     {
         config(['imageable-laravel.thumbnails_enabled' => true]);
-        $savedImageData = $this->imageable->saveImage(UploadedFile::fake()->image('avatar.jpg', 1920, 1024));
 
-        Storage::assertExists($savedImageData['fileName'].'_thumbnail.'.$savedImageData['extension']);
+        $savedImageData = $this->imageable->saveImage(
+            UploadedFile::fake()->image('avatar.jpg', 1920, 1024)
+        );
+
+        Storage::assertExists('public/' . $savedImageData['fileName'].'_thumbnail.'.$savedImageData['extension']);
     }
 
     /** @test */

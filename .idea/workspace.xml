@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Imageable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Imageable.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Unit/ImageableTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ImageableTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Requests/ImageableRequestTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Requests/ImageableRequestTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +131,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.ImageableRequestTest">
+  <component name="RunManager" selected="PHPUnit.ImageableTest.saving_image_can_create_thumbnail">
     <configuration name="ImageableRequestTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Gause\ImageableLaravel\Tests\ImageableRequestTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Requests/ImageableRequestTest.php" scope="Class" />
       <method v="2" />
@@ -149,8 +148,8 @@
       <TestRunner class="Gause\ImageableLaravel\Tests\Unit\ImageableTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/ImageableTest.php" method="deleting_image_also_deletes_image_from_storage" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UsesImagesTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Traits\UsesImagesTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Traits/UsesImagesTest.php" scope="Class" />
+    <configuration name="ImageableTest.saving_image_can_create_thumbnail" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\ImageableTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/ImageableTest.php" method="saving_image_can_create_thumbnail" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -159,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.ImageableTest.saving_image_can_create_thumbnail" />
         <item itemvalue="PHPUnit.ImageableRequestTest" />
         <item itemvalue="PHPUnit.ImageableRequestTest.image_is_stored_in_storage" />
         <item itemvalue="PHPUnit.ImageableTest.deleting_image_also_deletes_image_from_storage" />
         <item itemvalue="PHPUnit.ImageableTest" />
-        <item itemvalue="PHPUnit.UsesImagesTest" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +188,9 @@
       <workItem from="1589105659305" duration="1997000" />
       <workItem from="1590222641359" duration="12001000" />
       <workItem from="1590260635258" duration="32000" />
-      <workItem from="1590260897612" duration="9184000" />
+      <workItem from="1590260897612" duration="9701000" />
+      <workItem from="1590323237208" duration="12000" />
+      <workItem from="1590323922548" duration="526000" />
     </task>
     <servers />
   </component>
@@ -277,26 +278,26 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="99" y="57" width="1480" height="890" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1585255564587" />
-    <state width="1238" height="399" key="GridCell.Tab.0.bottom" timestamp="1590307519937">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state width="1638" height="286" key="GridCell.Tab.0.bottom" timestamp="1590324373394">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585635622311" />
-    <state width="1238" height="399" key="GridCell.Tab.0.bottom/0.23.2560.1417@0.23.2560.1417" timestamp="1590307519937" />
-    <state width="1238" height="399" key="GridCell.Tab.0.center" timestamp="1590307519937">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state width="1638" height="286" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1590324373394" />
+    <state width="1238" height="399" key="GridCell.Tab.0.bottom/0.23.2560.1417@0.23.2560.1417" timestamp="1590308072324" />
+    <state width="1638" height="286" key="GridCell.Tab.0.center" timestamp="1590324373393">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585635622310" />
-    <state width="1238" height="399" key="GridCell.Tab.0.center/0.23.2560.1417@0.23.2560.1417" timestamp="1590307519937" />
-    <state width="1238" height="399" key="GridCell.Tab.0.left" timestamp="1590307519936">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state width="1638" height="286" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1590324373393" />
+    <state width="1238" height="399" key="GridCell.Tab.0.center/0.23.2560.1417@0.23.2560.1417" timestamp="1590308072324" />
+    <state width="1638" height="286" key="GridCell.Tab.0.left" timestamp="1590324373392">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585635622310" />
-    <state width="1238" height="399" key="GridCell.Tab.0.left/0.23.2560.1417@0.23.2560.1417" timestamp="1590307519936" />
-    <state width="1238" height="399" key="GridCell.Tab.0.right" timestamp="1590307519937">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state width="1638" height="286" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1590324373392" />
+    <state width="1238" height="399" key="GridCell.Tab.0.left/0.23.2560.1417@0.23.2560.1417" timestamp="1590308072324" />
+    <state width="1638" height="286" key="GridCell.Tab.0.right" timestamp="1590324373394">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="273" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585635622310" />
-    <state width="1238" height="399" key="GridCell.Tab.0.right/0.23.2560.1417@0.23.2560.1417" timestamp="1590307519937" />
+    <state width="1638" height="286" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1590324373394" />
+    <state width="1238" height="399" key="GridCell.Tab.0.right/0.23.2560.1417@0.23.2560.1417" timestamp="1590308072324" />
     <state x="168" y="94" key="MergeDialog" timestamp="1585513030927">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -353,10 +354,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="533" y="314" width="700" height="530" key="recent.locations.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585310743318" />
-    <state x="770" y="337" width="1021" height="913" key="search.everywhere.popup" timestamp="1590307515750">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1590324308014">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585598467609" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1590324308014" />
     <state x="770" y="337" width="1021" height="913" key="search.everywhere.popup/0.23.2560.1417@0.23.2560.1417" timestamp="1590307515750" />
   </component>
 </project>

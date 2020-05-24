@@ -37,8 +37,10 @@ class Imageable
         );
 
         if (config('imageable-laravel.thumbnails_enabled')) {
-            $img->resize(320, null);
-            $thumbnailPath = $fileName.'_thumbnail.'.$fileExtension;
+            $img->resize(300, null, function ($constraint) {
+                $constraint->aspectRatio();
+            });
+            $thumbnailPath = 'public/'.$fileName.'_thumbnail.'.$fileExtension;
 
             $result = Storage::put(
                 $thumbnailPath,
