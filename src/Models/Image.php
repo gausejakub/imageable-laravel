@@ -2,6 +2,8 @@
 
 namespace Gause\ImageableLaravel\Models;
 
+use Gause\ImageableLaravel\Events\ImageCreated;
+use Gause\ImageableLaravel\Events\ImageDeleted;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 
@@ -22,6 +24,14 @@ class Image extends Model
         'position',
         'model_id',
         'model_type',
+    ];
+
+    /**
+     * @var string[]
+     */
+    protected $dispatchesEvents = [
+        'created' => ImageCreated::class,
+        'deleted' => ImageDeleted::class,
     ];
 
     /**

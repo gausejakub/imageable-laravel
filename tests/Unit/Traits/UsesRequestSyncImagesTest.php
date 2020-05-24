@@ -72,7 +72,6 @@ class UsesRequestSyncImagesTest extends LaravelTestCase
     /** @test */
     public function can_add_new_image()
     {
-        $this->withoutExceptionHandling();
         $this->assertDatabaseHas('images', [
             'id' => $this->image->id,
         ]);
