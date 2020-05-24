@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1449e9a2-b80a-456f-bb56-a030fa54ab45" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Imageable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Imageable.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Unit/ImageableTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ImageableTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +130,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.ImageableTest.saving_image_can_create_thumbnail">
+  <component name="RunManager" selected="PHPUnit.ImageableTest.deleting_image_also_deletes_image_thumbnail_from_storage_if_exists">
     <configuration name="ImageableRequestTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Gause\ImageableLaravel\Tests\ImageableRequestTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Requests/ImageableRequestTest.php" scope="Class" />
       <method v="2" />
@@ -140,12 +139,12 @@
       <TestRunner class="Gause\ImageableLaravel\Tests\ImageableRequestTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Requests/ImageableRequestTest.php" method="image_is_stored_in_storage" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ImageableTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\ImageableTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/ImageableTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
     <configuration name="ImageableTest.deleting_image_also_deletes_image_from_storage" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Gause\ImageableLaravel\Tests\Unit\ImageableTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/ImageableTest.php" method="deleting_image_also_deletes_image_from_storage" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ImageableTest.deleting_image_also_deletes_image_thumbnail_from_storage_if_exists" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\ImageableTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/ImageableTest.php" method="deleting_image_also_deletes_image_thumbnail_from_storage_if_exists" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ImageableTest.saving_image_can_create_thumbnail" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -158,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.ImageableTest.deleting_image_also_deletes_image_thumbnail_from_storage_if_exists" />
         <item itemvalue="PHPUnit.ImageableTest.saving_image_can_create_thumbnail" />
         <item itemvalue="PHPUnit.ImageableRequestTest" />
         <item itemvalue="PHPUnit.ImageableRequestTest.image_is_stored_in_storage" />
         <item itemvalue="PHPUnit.ImageableTest.deleting_image_also_deletes_image_from_storage" />
-        <item itemvalue="PHPUnit.ImageableTest" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +189,7 @@
       <workItem from="1590260635258" duration="32000" />
       <workItem from="1590260897612" duration="9701000" />
       <workItem from="1590323237208" duration="12000" />
-      <workItem from="1590323922548" duration="526000" />
+      <workItem from="1590323922548" duration="735000" />
     </task>
     <servers />
   </component>

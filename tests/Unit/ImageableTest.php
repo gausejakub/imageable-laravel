@@ -168,6 +168,24 @@ class ImageableTest extends LaravelTestCase
     }
 
     /** @test */
+    public function deleting_image_also_deletes_image_thumbnail_from_storage_if_exists()
+    {
+        config(['imageable-laravel.thumbnails_enabled' => true]);
+        $image = $this->imageable->createImage(UploadedFile::fake()->image('avatar.jpg'));
+
+        Storage::assertExists('public/'.$image->file_name.'.'.$image->file_extension);
+        Storage::assertExists('public/'.$image->file_name.'_thumbnail.'.$image->file_extension);
+
+        $this->imageable->deleteImage($image);
+
+        $this->assertDatabaseMissing('images', [
+            'id' => $image->id,
+        ]);
+        Storage::assertMissing('public/'.$image->file_name.'.'.$image->file_extension);
+        Storage::assertMissing('public/'.$image->file_name.'_thumbnail.'.$image->file_extension);
+    }
+
+    /** @test */
     public function deleting_image_updates_positions()
     {
         $dummyModel = DummyModel::create();
