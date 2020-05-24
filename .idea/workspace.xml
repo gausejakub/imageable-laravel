@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1449e9a2-b80a-456f-bb56-a030fa54ab45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Events/ImageDeleted.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/Providers/ImageableLaravelServiceProviderTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imageable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Imageable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ImageableLaravelServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ImageableLaravelServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Models/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Image.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Unit/Models/ImageTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Models/ImageTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Traits/UsesRequestSyncImagesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Traits/UsesRequestSyncImagesTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,25 +134,25 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.ImageTest">
-    <configuration name="ImageTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Models\ImageTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Models/ImageTest.php" scope="Class" />
+  <component name="RunManager" selected="PHPUnit.ImageTest.imageable_delete_method_is_called_when_deleting_image">
+    <configuration name="DeleteImageFileTest.it_deletes_image_file" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Listeners\DeleteImageFileTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Listeners/DeleteImageFileTest.php" method="it_deletes_image_file" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ImageTest.image_deleted_is_called_after_model_is_deleted" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Models\ImageTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Models/ImageTest.php" method="image_deleted_is_called_after_model_is_deleted" scope="Method" />
+    <configuration name="DeleteImageFile.it_deletes_image_file" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Listeners\DeleteImageFile" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Listeners/DeleteImageFileTest.php" method="it_deletes_image_file" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UsesRequestSyncImagesTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Traits\UsesRequestSyncImagesTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Traits/UsesRequestSyncImagesTest.php" scope="Class" />
+    <configuration name="DeleteModelImagesTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Listeners\DeleteModelImagesTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Listeners/DeleteModelImagesTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="UsesRequestSyncImagesTest.can_add_new_image" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Traits\UsesRequestSyncImagesTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Traits/UsesRequestSyncImagesTest.php" method="can_add_new_image" scope="Method" />
+    <configuration name="ImageTest.image_created_is_called_after_model_is_created" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Models\ImageTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Models/ImageTest.php" method="image_created_is_called_after_model_is_created" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UsesRequestSyncImagesTest.can_delete_all_images" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Traits\UsesRequestSyncImagesTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Traits/UsesRequestSyncImagesTest.php" method="can_delete_all_images" scope="Method" />
+    <configuration name="ImageTest.imageable_delete_method_is_called_when_deleting_image" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Models\ImageTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Models/ImageTest.php" method="imageable_delete_method_is_called_when_deleting_image" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -160,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.ImageTest" />
-        <item itemvalue="PHPUnit.ImageTest.image_deleted_is_called_after_model_is_deleted" />
-        <item itemvalue="PHPUnit.UsesRequestSyncImagesTest" />
-        <item itemvalue="PHPUnit.UsesRequestSyncImagesTest.can_add_new_image" />
-        <item itemvalue="PHPUnit.UsesRequestSyncImagesTest.can_delete_all_images" />
+        <item itemvalue="PHPUnit.ImageTest.imageable_delete_method_is_called_when_deleting_image" />
+        <item itemvalue="PHPUnit.ImageTest.image_created_is_called_after_model_is_created" />
+        <item itemvalue="PHPUnit.DeleteModelImagesTest" />
+        <item itemvalue="PHPUnit.DeleteImageFileTest.it_deletes_image_file" />
+        <item itemvalue="PHPUnit.DeleteImageFile.it_deletes_image_file" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +191,7 @@
       <workItem from="1589105659305" duration="1997000" />
       <workItem from="1590222641359" duration="12001000" />
       <workItem from="1590260635258" duration="32000" />
-      <workItem from="1590260897612" duration="3098000" />
+      <workItem from="1590260897612" duration="7689000" />
     </task>
     <servers />
   </component>
@@ -244,10 +245,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="528" y="260" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585313161124" />
-    <state x="200" y="214" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1590258951594">
+    <state x="200" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1590302651885">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="200" y="214" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.2560.1417@0.23.2560.1417" timestamp="1590258951594" />
+    <state x="200" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.2560.1417@0.23.2560.1417" timestamp="1590302651885" />
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585166744278">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -257,10 +258,11 @@
     </state>
     <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585427370439" />
     <state x="881" y="410" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.2560.1417@0.23.2560.1417" timestamp="1590259574320" />
-    <state x="421" y="40" key="CommitChangelistDialog2" timestamp="1585474608065">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="642" y="77" key="CommitChangelistDialog2" timestamp="1590302787930">
+      <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="421" y="40" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1585474608065" />
+    <state x="642" y="77" key="CommitChangelistDialog2/0.23.2560.1417@0.23.2560.1417" timestamp="1590302787930" />
     <state width="330" height="606" key="Diff.GoToChangePopup" timestamp="1585255401584">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -269,26 +271,26 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="99" y="57" width="1480" height="890" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1585255564587" />
-    <state width="1238" height="399" key="GridCell.Tab.0.bottom" timestamp="1590300722565">
+    <state width="1238" height="399" key="GridCell.Tab.0.bottom" timestamp="1590305237605">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state width="1638" height="273" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585635622311" />
-    <state width="1238" height="399" key="GridCell.Tab.0.bottom/0.23.2560.1417@0.23.2560.1417" timestamp="1590300722565" />
-    <state width="1238" height="399" key="GridCell.Tab.0.center" timestamp="1590300722565">
+    <state width="1238" height="399" key="GridCell.Tab.0.bottom/0.23.2560.1417@0.23.2560.1417" timestamp="1590305237605" />
+    <state width="1238" height="399" key="GridCell.Tab.0.center" timestamp="1590305237605">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state width="1638" height="273" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585635622310" />
-    <state width="1238" height="399" key="GridCell.Tab.0.center/0.23.2560.1417@0.23.2560.1417" timestamp="1590300722565" />
-    <state width="1238" height="399" key="GridCell.Tab.0.left" timestamp="1590300722565">
+    <state width="1238" height="399" key="GridCell.Tab.0.center/0.23.2560.1417@0.23.2560.1417" timestamp="1590305237605" />
+    <state width="1238" height="399" key="GridCell.Tab.0.left" timestamp="1590305237604">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state width="1638" height="273" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585635622310" />
-    <state width="1238" height="399" key="GridCell.Tab.0.left/0.23.2560.1417@0.23.2560.1417" timestamp="1590300722565" />
-    <state width="1238" height="399" key="GridCell.Tab.0.right" timestamp="1590300722565">
+    <state width="1238" height="399" key="GridCell.Tab.0.left/0.23.2560.1417@0.23.2560.1417" timestamp="1590305237604" />
+    <state width="1238" height="399" key="GridCell.Tab.0.right" timestamp="1590305237605">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state width="1638" height="273" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585635622310" />
-    <state width="1238" height="399" key="GridCell.Tab.0.right/0.23.2560.1417@0.23.2560.1417" timestamp="1590300722565" />
+    <state width="1238" height="399" key="GridCell.Tab.0.right/0.23.2560.1417@0.23.2560.1417" timestamp="1590305237605" />
     <state x="168" y="94" key="MergeDialog" timestamp="1585513030927">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -297,11 +299,11 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="547" y="239" key="MultipleFileMergeDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585513030970" />
-    <state x="937" y="471" key="NewPhpClassDialog" timestamp="1590300538425">
+    <state x="937" y="471" key="NewPhpClassDialog" timestamp="1590301966472">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="615" y="332" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585473828340" />
-    <state x="937" y="471" key="NewPhpClassDialog/0.23.2560.1417@0.23.2560.1417" timestamp="1590300538425" />
+    <state x="937" y="471" key="NewPhpClassDialog/0.23.2560.1417@0.23.2560.1417" timestamp="1590301966472" />
     <state x="1003" y="632" key="NewPhpFileDialog" timestamp="1590249449664">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
@@ -344,9 +346,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="533" y="314" width="700" height="530" key="recent.locations.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585310743318" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1585598467609">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="770" y="337" width="1021" height="913" key="search.everywhere.popup" timestamp="1590305917675">
+      <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585598467609" />
+    <state x="770" y="337" width="1021" height="913" key="search.everywhere.popup/0.23.2560.1417@0.23.2560.1417" timestamp="1590305917675" />
   </component>
 </project>

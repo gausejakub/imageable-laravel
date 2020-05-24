@@ -3,7 +3,7 @@
 namespace Gause\ImageableLaravel\Tests\Unit\Models;
 
 use Gause\ImageableLaravel\Events\ImageCreated;
-use Gause\ImageableLaravel\Events\ImageDeleted;
+use Gause\ImageableLaravel\Facades\Imageable;
 use Gause\ImageableLaravel\Models\Image;
 use Gause\ImageableLaravel\Tests\LaravelTestCase;
 use Illuminate\Database\Eloquent\Relations\Relation;
@@ -98,9 +98,10 @@ class ImageTest extends LaravelTestCase
     }
 
     /** @test */
-    public function image_deleted_is_called_after_model_is_deleted()
+    public function imageable_delete_method_is_called_when_deleting_image()
     {
-        Event::fake();
+        Imageable::shouldReceive('deleteImage');
+
         $image = Image::create([
             'name' => 'MyNewImage',
             'file_name' => 'some_name',
@@ -110,7 +111,5 @@ class ImageTest extends LaravelTestCase
         ]);
 
         $image->delete();
-
-        Event::assertDispatched(ImageDeleted::class);
     }
 }

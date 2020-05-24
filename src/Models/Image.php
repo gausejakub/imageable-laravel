@@ -4,6 +4,7 @@ namespace Gause\ImageableLaravel\Models;
 
 use Gause\ImageableLaravel\Events\ImageCreated;
 use Gause\ImageableLaravel\Events\ImageDeleted;
+use Gause\ImageableLaravel\Facades\Imageable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 
@@ -77,5 +78,18 @@ class Image extends Model
     public function getTemporaryUrlAttribute(): string
     {
         return \Illuminate\Support\Facades\Storage::temporaryUrl($this->path);
+    }
+
+    /**
+     * Delete Image
+     * @return bool|null
+     * @throws \Exception
+     */
+    public function delete(bool $deleteWithFile = true): bool
+    {
+        if ($deleteWithFile === true) {
+            return Imageable::deleteImage($this);
+        }
+        return parent::delete();
     }
 }

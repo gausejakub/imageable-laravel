@@ -4,6 +4,7 @@ namespace Gause\ImageableLaravel;
 
 use Gause\ImageableLaravel\Events\ImageCreated;
 use Gause\ImageableLaravel\Models\Image;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 
 class Imageable
@@ -79,11 +80,11 @@ class Imageable
      * @param string|null $name
      * @param string|null $shortDescription
      * @param string|null $description
-     * @param \Illuminate\Database\Eloquent\Model|null $model
+     * @param Model|null $model
      * @param int|null $position
-     * @return \Gause\ImageableLaravel\Models\Image
+     * @return Image
      */
-    public function createImage($imageFile, string $name = null, string $shortDescription = null, string $description = null, \Illuminate\Database\Eloquent\Model $model = null, int $position = null): \Gause\ImageableLaravel\Models\Image
+    public function createImage($imageFile, string $name = null, string $shortDescription = null, string $description = null, Model $model = null, int $position = null): Image
     {
         if (is_file($imageFile)) {
             $originalFileName = $imageFile->getClientOriginalName();
@@ -110,8 +111,6 @@ class Imageable
             'model_type' => $model ? get_class($model) : null,
         ]);
 
-        event(new ImageCreated($image));
-
         return $image;
     }
 
@@ -122,7 +121,7 @@ class Imageable
      * @return bool
      * @throws \Exception
      */
-    public function deleteImage(\Gause\ImageableLaravel\Models\Image $image): bool
+    public function deleteImage(Image $image): bool
     {
         $this->deleteImageFromStorage($image->path);
 
@@ -137,16 +136,16 @@ class Imageable
             }
         }
 
-        return $image->delete();
+        return $image->delete(false);
     }
 
     /**
      * Return next available position of model images.
      *
-     * @param \Illuminate\Database\Eloquent\Model $model
+     * @param Model $model
      * @return int
      */
-    public function getNextPosition(\Illuminate\Database\Eloquent\Model $model): int
+    public function getNextPosition(Model $model): int
     {
         return $this->countOfImages($model) + 1;
     }
@@ -154,10 +153,10 @@ class Imageable
     /**
      * Return currently highest position of model images.
      *
-     * @param \Illuminate\Database\Eloquent\Model $model
+     * @param Model $model
      * @return int
      */
-    public function getHighestPosition(\Illuminate\Database\Eloquent\Model $model): int // TODO test me
+    public function getHighestPosition(Model $model): int // TODO test me
     {
         return $this->countOfImages($model);
     }
@@ -165,10 +164,10 @@ class Imageable
     /**
      * Return count of model images.
      *
-     * @param \Illuminate\Database\Eloquent\Model $model
+     * @param Model $model
      * @return int
      */
-    public function countOfImages(\Illuminate\Database\Eloquent\Model $model): int
+    public function countOfImages(Model $model): int
     {
         return Image::where('model_id', $model->id)
                 ->where('model_type', get_class($model))
