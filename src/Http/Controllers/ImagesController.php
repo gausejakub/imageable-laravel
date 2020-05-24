@@ -18,7 +18,7 @@ class ImagesController
      */
     public function index(Request $request): JsonResponse
     {
-        $request->validate( [
+        $request->validate([
             'model_id' => 'required|int',
             'model_type' => 'required|string',
         ]);

@@ -72,7 +72,6 @@ class Image extends Model
         } else {
             return $this->path;
         }
-
     }
 
     /**
