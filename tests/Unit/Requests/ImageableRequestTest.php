@@ -63,7 +63,7 @@ class ImageableRequestTest extends LaravelTestCase
 
         $image = Image::where('name', 'New Image')->first();
 
-        Storage::assertExists('public/' . $image->file_name.'.'.$image->file_extension);
+        Storage::assertExists('public/'.$image->file_name.'.'.$image->file_extension);
     }
 
     /** @test */
