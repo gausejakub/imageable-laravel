@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1449e9a2-b80a-456f-bb56-a030fa54ab45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/Feature/Endpoints/API/GetImagesEndpointTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Http/Controllers/ImagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Http/Controllers/ImagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imageable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Imageable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Image.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/ImageTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Models/ImageTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,25 +132,25 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.GetImagesEndpointTest.returns_public_images_array_in_response">
+  <component name="RunManager" selected="PHPUnit.ImageTest">
     <configuration name="GetImagesEndpointTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Gause\ImageableLaravel\Tests\Feature\Endpoints\API\GetImagesEndpointTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/Endpoints/API/GetImagesEndpointTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="GetImagesEndpointTest.can_call_get_images_endpoint" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Feature\Endpoints\API\GetImagesEndpointTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/Endpoints/API/GetImagesEndpointTest.php" method="can_call_get_images_endpoint" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="GetImagesEndpointTest.returns_public_images_array_in_response" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Gause\ImageableLaravel\Tests\Feature\Endpoints\API\GetImagesEndpointTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/Endpoints/API/GetImagesEndpointTest.php" method="returns_public_images_array_in_response" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ImageableTest.deleting_image_also_deletes_image_from_storage" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\ImageableTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/ImageableTest.php" method="deleting_image_also_deletes_image_from_storage" scope="Method" />
+    <configuration name="ImageTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Models\ImageTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Models/ImageTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="UsesImagesTest.adds_attribute_to_model_of_public_images_array" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Traits\UsesImagesTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Traits/UsesImagesTest.php" method="adds_attribute_to_model_of_public_images_array" scope="Method" />
+    <configuration name="ImageTest.can_get_thumbnail_path" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Models\ImageTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Models/ImageTest.php" method="can_get_thumbnail_path" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ImageTest.thumb_path_returns_main_file_path_if_thumbnails_are_disabled" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Gause\ImageableLaravel\Tests\Unit\Models\ImageTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Models/ImageTest.php" method="thumb_path_returns_main_file_path_if_thumbnails_are_disabled" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -159,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.ImageTest" />
+        <item itemvalue="PHPUnit.ImageTest.thumb_path_returns_main_file_path_if_thumbnails_are_disabled" />
+        <item itemvalue="PHPUnit.ImageTest.can_get_thumbnail_path" />
         <item itemvalue="PHPUnit.GetImagesEndpointTest.returns_public_images_array_in_response" />
         <item itemvalue="PHPUnit.GetImagesEndpointTest" />
-        <item itemvalue="PHPUnit.GetImagesEndpointTest.can_call_get_images_endpoint" />
-        <item itemvalue="PHPUnit.UsesImagesTest.adds_attribute_to_model_of_public_images_array" />
-        <item itemvalue="PHPUnit.ImageableTest.deleting_image_also_deletes_image_from_storage" />
       </list>
     </recent_temporary>
   </component>
@@ -191,7 +191,7 @@
       <workItem from="1590260635258" duration="32000" />
       <workItem from="1590260897612" duration="9701000" />
       <workItem from="1590323237208" duration="12000" />
-      <workItem from="1590323922548" duration="2944000" />
+      <workItem from="1590323922548" duration="3180000" />
     </task>
     <servers />
   </component>
@@ -280,25 +280,25 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="99" y="57" width="1480" height="890" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1585255564587" />
-    <state width="1638" height="286" key="GridCell.Tab.0.bottom" timestamp="1590327086565">
+    <state width="1638" height="286" key="GridCell.Tab.0.bottom" timestamp="1590327295243">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="286" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1590327086565" />
+    <state width="1638" height="286" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1590327295243" />
     <state width="1238" height="399" key="GridCell.Tab.0.bottom/0.23.2560.1417@0.23.2560.1417" timestamp="1590308072324" />
-    <state width="1638" height="286" key="GridCell.Tab.0.center" timestamp="1590327086563">
+    <state width="1638" height="286" key="GridCell.Tab.0.center" timestamp="1590327295242">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="286" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1590327086563" />
+    <state width="1638" height="286" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1590327295242" />
     <state width="1238" height="399" key="GridCell.Tab.0.center/0.23.2560.1417@0.23.2560.1417" timestamp="1590308072324" />
-    <state width="1638" height="286" key="GridCell.Tab.0.left" timestamp="1590327086562">
+    <state width="1638" height="286" key="GridCell.Tab.0.left" timestamp="1590327295241">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="286" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1590327086562" />
+    <state width="1638" height="286" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1590327295241" />
     <state width="1238" height="399" key="GridCell.Tab.0.left/0.23.2560.1417@0.23.2560.1417" timestamp="1590308072324" />
-    <state width="1638" height="286" key="GridCell.Tab.0.right" timestamp="1590327086564">
+    <state width="1638" height="286" key="GridCell.Tab.0.right" timestamp="1590327295242">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="286" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1590327086564" />
+    <state width="1638" height="286" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1590327295242" />
     <state width="1238" height="399" key="GridCell.Tab.0.right/0.23.2560.1417@0.23.2560.1417" timestamp="1590308072324" />
     <state x="168" y="94" key="MergeDialog" timestamp="1585513030927">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -360,10 +360,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="533" y="314" width="700" height="530" key="recent.locations.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585310743318" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1590326436734">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1590327328141">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1590326436734" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1590327328141" />
     <state x="770" y="337" width="1021" height="913" key="search.everywhere.popup/0.23.2560.1417@0.23.2560.1417" timestamp="1590307515750" />
   </component>
 </project>

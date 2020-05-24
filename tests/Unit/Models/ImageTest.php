@@ -50,6 +50,7 @@ class ImageTest extends LaravelTestCase
     /** @test */
     public function can_get_thumbnail_path()
     {
+        config(['imageable-laravel.thumbnails_enabled' => true]);
         $image = Image::create([
             'name' => 'MyNewImage',
             'file_name' => 'some_name',
@@ -59,6 +60,21 @@ class ImageTest extends LaravelTestCase
         ]);
 
         $this->assertEquals('public/some_name_thumbnail.jpg', $image->thumbPath);
+    }
+
+    /** @test */
+    public function thumb_path_returns_main_file_path_if_thumbnails_are_disabled()
+    {
+        config(['imageable-laravel.thumbnails_enabled' => false]);
+        $image = Image::create([
+            'name' => 'MyNewImage',
+            'file_name' => 'some_name',
+            'file_extension' => 'jpg',
+            'file_size' => 69,
+            'original_file_name' => 'OriginalName',
+        ]);
+
+        $this->assertEquals('public/some_name.jpg', $image->thumbPath);
     }
 
     /** @test */

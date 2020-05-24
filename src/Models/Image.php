@@ -67,7 +67,12 @@ class Image extends Model
      */
     public function getThumbPathAttribute(): string
     {
-        return 'public/'.$this->file_name.'_thumbnail.'.$this->file_extension;
+        if (config('imageable-laravel.thumbnails_enabled')) {
+            return 'public/'.$this->file_name.'_thumbnail.'.$this->file_extension;
+        } else {
+            return $this->path;
+        }
+
     }
 
     /**

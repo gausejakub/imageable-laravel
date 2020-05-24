@@ -64,8 +64,6 @@ class Imageable
      */
     public function deleteImageFromStorage($path): void
     {
-        Storage::delete($path);
-
         $explodedPath = explode('.', $path);
         $explodedPath[count($explodedPath) - 2] = $explodedPath[count($explodedPath) - 2].'_thumbnail';
         $thumbnailPath = implode('.', $explodedPath);
